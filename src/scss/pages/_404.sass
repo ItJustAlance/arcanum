@@ -1,0 +1,72 @@
+.page-404
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  +r($lg)
+    flex-wrap: wrap
+  .img
+    max-width: 600px
+    background: #FFAFBF
+    border-radius: 16px
+    padding: 35px
+    font-size: 254px
+    line-height: 1
+    font-weight: 900
+    letter-spacing: -10.16px
+    margin-right: 10px
+    color: #D53656
+    text-align: center
+    +r($xl)
+      font-size: 200px
+    +r($lg)
+      width: 100%
+      max-width: 100%
+      margin-bottom: 32px
+    +r($md)
+      max-width: 500px
+      margin: 0 auto 32px
+      font-size: 148px
+      height: 350px
+      display: flex
+      align-items: center
+      justify-content: center
+    +r($xs)
+      //width: 280px
+      height: 280px
+      font-size: 100px
+      letter-spacing: 0
+  .info-404
+    margin-left: 10px
+    flex: 1 1 auto
+    max-width: 500px
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    +r($lg)
+      text-align: left
+      margin-left: 0
+    .h2-title
+      padding-bottom: 18px
+      +r($xss)
+        font-size: 19px
+    .text
+      padding-bottom: 32px
+      font-size: 15px
+    .b-links
+      text-align: center
+      max-width: 420px
+      margin: 0 auto
+      width: 100%
+      +r($md)
+        max-width: 500px
+      li
+        margin-bottom: 18px
+        display: block
+      a
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+      a.btn
+        text-decoration: none

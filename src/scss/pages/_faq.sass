@@ -1,0 +1,32 @@
+.section--faq
+  .faq-list
+    padding-bottom: 40px
+    +r($md)
+      padding-bottom: 24px
+.p-form-faq
+  background: $baseBg
+  border-radius: 16px
+  overflow: hidden
+  position: relative
+  .p-login
+    &-left
+      background: $baseBg
+      padding: 60px
+      max-width: 560px
+      width: 50%
+      +r($md)
+        width: 100%
+        padding: 20px 10px
+      &:after
+        display: none
+    &-image
+      background: #daf3ff
+      width: 50%
+      +r($md)
+        display: none
+    &-form
+      margin-left: 0
+  .text-captcha
+    color: $clrGrey90
+    padding-bottom: 9px
+    opacity: .6

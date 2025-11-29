@@ -1,0 +1,146 @@
+.login-page
+  .header
+    display: none
+    +r($lg)
+      display: block
+  .footer
+    margin-top: 0
+  .main
+    flex: 1 1 auto
+    display: flex
+    justify-content: center
+.p-login
+  display: flex
+  width: 100%
+  background: #daf3ff
+  &-container
+    display: flex
+    margin: 0 auto
+    max-width: 1440px
+    width: 100%
+    position: relative
+    +r($md)
+      flex-wrap: wrap
+  &-left
+    width: 42%
+    display: flex
+    position: relative
+    padding: 0 20px
+    background: #fff
+    border-radius: 0 16px 16px 0
+    z-index: 1
+    +r($xl)
+      min-width: 50%
+    +r($lg)
+      min-width: 400px
+      padding-left: 10px
+      padding-right: 10px
+    +r($md)
+      width: 100%
+      min-width: 100%
+      border-radius: 0
+    &:after
+      width: 2000px
+      height: 100%
+      position: absolute
+      content: ""
+      top: 0
+      right: 50%
+      background: #fff
+      z-index: -1
+    &__wrapper
+      max-width: 440px
+      width: 100%
+      margin: 0 auto
+      display: flex
+      flex-direction: column
+  &-header
+    padding: 43px 0
+    +r($lg)
+      display: none
+    .svg-icon--logo
+      width: 160px
+      height: 20px
+  &-form
+    margin-left: auto
+    min-width: 402px
+    flex: 1 1 auto
+    flex-direction: column
+    justify-content: center
+    display: flex
+    padding: 20px 0
+    width: 100%
+    +r($lg)
+      min-width: 360px
+      width: 100%
+    +r($md)
+      min-width: 260px
+    &__header
+      padding-bottom: 28px
+      +r($md)
+        padding-bottom: 20px
+    .inp-password
+      position: relative
+      width: 100%
+      &:hover
+        .password-icon
+          color: $clrGrey50
+      &.show-password
+        .password-icon
+          .svg-icon--eye
+            display: none
+          .svg-icon--eye-off
+            display: block
+      .password-icon
+        position: absolute
+        top: 15px
+        right: 15px
+        color: $clrGrey40
+        cursor: pointer
+        .svg-icon--eye-off
+          display: none
+    .link-repass
+      margin-left: auto
+    &__title
+      text-transform: uppercase
+      padding-bottom: 12px
+    .btn
+      .icon
+        margin-right: 4px
+  &-image
+    position: relative
+    z-index: 1
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 20px
+    flex: 1 1 auto
+    +r($md)
+      display: none
+  .login-bottom
+    text-align: center
+    justify-content: center
+    padding-top: 14px
+    &__item
+      display: inline-block
+      vertical-align: top
+      margin: 0 6px
+  .reg-step
+    display: none
+    position: relative
+    &.active
+      display: block
+    &-bullit
+      text-align: center
+      padding: 40px 0
+      &__item
+        display: inline-block
+        vertical-align: top
+        width: 10px
+        height: 10px
+        background: $clrGrey30
+        border-radius: 50%
+        margin: 0 19px
+        &.active
+          background: $clrPrimaryMain
+

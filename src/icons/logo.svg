@@ -1,0 +1,6 @@
+
+<svg width="300" height="120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="30" width="80" height="60" fill="#E91E63"/>
+  <text x="40" y="70" font-size="32" font-family="Arial" fill="white" font-weight="bold">GO</text>
+  <text x="110" y="70" font-size="32" font-family="Arial" fill="black" font-weight="bold">- VUE</text>
+</svg>

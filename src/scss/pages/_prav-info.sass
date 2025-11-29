@@ -1,0 +1,86 @@
+.section
+  margin-bottom: 80px
+  &:last-child
+    margin-bottom: 0
+  +r($sm)
+    margin-bottom: 40px
+  &--prav
+    background: $baseBg
+    border-radius: 16px
+    padding: 60px 30px
+    +r($sm)
+      padding: 40px 12px
+      margin-left: -12px
+      margin-right: -12px
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+    .h2-title
+      padding-bottom: 32px
+    .h4-title
+      padding-bottom: 18px
+    p
+      padding: 0 0 32px
+      &:last-child
+        padding-bottom: 0
+  &-wrapper
+    max-width: 810px
+    width: 100%
+    margin: 0 auto
+
+  &--soglasie
+    max-width: 800px
+  &--document
+    margin-bottom: 0
+    .h2-title
+      padding-bottom: 40px
+      +r($sm)
+        padding-bottom: 32px
+
+.text-small-overflow
+  display: none
+  +r($md)
+    display: block
+.text-full-overflow
+  +r($md)
+    display: none
+
+.document-list
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -20px 40px
+  .document-item
+    width: 50%
+    padding: 0 20px 12px
+    display: flex
+    +r($md)
+      width: 100%
+    &__wrapper
+      border: 1px solid $clrPrimaryBorder
+      border-radius: 16px
+      display: flex
+      padding: 24px
+      align-items: center
+      color: $clrGrey90
+      width: 100%
+      &:hover
+        background: $baseBg
+        .icon
+          background: #fff
+    .icon
+      margin-right: 12px
+      min-width: 56px
+      max-width: 56px
+      height: 56px
+      border-radius: 8px
+      background: $baseBg
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $clrGrey80
+      .svg-icon
+        width: 24px
+        height: 24px
+    .text
+      flex: 1 1 auto
