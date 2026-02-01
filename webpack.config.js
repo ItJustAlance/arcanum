@@ -55,7 +55,12 @@ const baseConfig = {
 			{
 				test: /\.html$/,
 				include: path.resolve(__dirname, "src/html/includes"),
-				use: ["raw-loader"],
+				use: [
+					{
+						loader: "raw-loader",
+						options: { esModule: false } // <- для импорта includes в includes
+					}
+				],
 			},
 			
 			// обработка изображений, SVG в src/icons исключаем (они идут в inline-спрайт)
