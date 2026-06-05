@@ -1,7 +1,7 @@
 <%
 var data = {
-title: "Заголовок сайта",
-copyright: "itJustAlance"
+title: "Arcanum Lounge",
+copyright: "Arcanum"
 };
 
 var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);
@@ -12,23 +12,8 @@ var footerHtml = _.template(require('../includes/footer.html'))({
 mobileFooter,
 mobileMenu
 });
-
-
 %>
 
-<div class="container">
-  <br><br>
-  <div class="btns">
-    <a class="btn js-btn-modal" href="#" data-modal="modal-support">Модальное окно</a>
-  </div>
-  <br><br>
-  <pre>
-    для запуска модального окна,
-    добавляем класс "js-btn-modal"
-    для указания id модального окна пишем аттрибут data-modal="modal-support"
-    &#706;a class="js-btn-modal" href="#" data-modal="modal-support"&#707;Модальное окно&#706;/a&#707;
-  </pre>
-  Контент.
+<div class="over">
+  <%= footerHtml %>
 </div>
-
-<%= footerHtml %>

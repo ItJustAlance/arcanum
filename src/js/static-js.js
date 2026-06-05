@@ -1,8 +1,6 @@
 import $ from "jquery";
 
 $(function() {
-  console.log($);
-  
   $(".js-btn-modal").on("click", function (){
     const modal = $(this).data("modal");
     $("body").addClass("lock just-modal--default")

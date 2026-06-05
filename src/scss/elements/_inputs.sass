@@ -1,147 +1,21 @@
-.input
-  padding: 12px
+.input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea
+  padding: 14px 20px
   font-size: 15px
-  color:  $clrGrey50
-  background: #fff
+  font-family: $baseFont
+  color: $colorText
+  background: $colorBgSecond
   border-radius: 4px
-  border: 1px solid $clrGrey40
+  border: 1px solid rgba(255,255,255, .2)
   width: 100%
+  transition: border-color $transitionSpeed $ease
+  &::placeholder
+    color: $colorTextMuted
   &:hover
-    border-color: $clrPrimaryHover
+    border-color: rgba(255,255,255, .4)
   &:focus
-    border-color: $clrPrimaryFocus
-  &.inp-error
-    border-color: $clrDangerMain
-  &.inp-succ
-    border-color: $clrSuccessMain
-  &.disabled, &[disabled]
-    border-color: $clrGrey40
-    background: $clrGrey20
-    color: $clrGrey60
-.textarea
-  padding: 12px
-  font-size: 15px
-  color:  $clrGrey50
-  background: #fff
-  border-radius: 4px
-  border: 1px solid $clrGrey40
-  width: 100%
-  &:hover
-    border-color: $clrPrimaryHover
-  &:focus
-    border-color: $clrPrimaryFocus
-  &.inp-error
-    border-color: $clrDangerMain
-  &.inp-succ
-    border-color: $clrSuccessMain
-  &.disabled, &[disabled]
-    border-color: $clrGrey40
-    background: $clrGrey20
-    color: $clrGrey60
-
-.b-checkbox
-  position: relative
-  display: inline-block
-  vertical-align: top
-  input
-    position: absolute
-    top: 0
-    left: 0
-    z-index: -1
-    opacity: 0
-    &:checked + .b-checkbox__label
-      .checked
-        background: $clrPrimaryMain
-        .svg-icon
-          opacity: 1
-  &__text
-    display: block
-  &__label
-    position: relative
-    cursor: pointer
-    padding-left: 28px
-    padding-top: 1px
-    display: block
-    a
-      text-decoration: underline
-      &:hover
-        text-decoration: none
-    .checked
-      border: 1px solid $clrGrey50
-      width: 20px
-      height: 20px
-      border-radius: 6px
-      background: #fff
-      position: absolute
-      top: 1px
-      left: 0
-      .svg-icon
-        fill: #fff
-        opacity: 0
-        position: absolute
-        top: 1px
-        left: 1px
-  &:hover
-    .b-checkbox
-      &__label
-        .checked
-        border-color: $clrPrimaryHover
-
-.b-radio
-  position: relative
-  display: inline-block
-  vertical-align: top
-  input
-    position: absolute
-    top: 0
-    left: 0
-    z-index: -1
-    opacity: 0
-    &:checked + .b-radio__label
-      .checked
-        border-color: #000
-        &:after
-          display: block
-
-  &__label
-    position: relative
-    cursor: pointer
-    padding-left: 28px
-    padding-top: 1px
-    display: flex
-
-    a
-      text-decoration: underline
-      &:hover
-        text-decoration: none
-    .checked
-      border: 1px solid $clrGrey50
-      width: 20px
-      height: 20px
-      border-radius: 50%
-      background: #fff
-      position: absolute
-      top: 0
-      left: 0
-      &:after
-        content: ""
-        background: #000
-        top: 3px
-        bottom: 3px
-        right: 3px
-        left: 3px
-        border-radius: 50%
-        display: none
-        position: absolute
-  &:hover
-    .b-radio
-      &__label
-        .checked
-          border-color: $clrPrimaryHover
-  &--blue
-    .b-radio
-      &__label
-        .checked
-          border-color: $clrPrimaryMain
-          &:after
-            background: $clrPrimaryMain
+    border-color: $colorAccent
+    outline: none
