@@ -14,6 +14,57 @@ $(function() {
     arrows: false,
   });
 
+  // VIP slider
+  $('.js-vip-slider').slick({
+    slidesToShow: 1,
+    fade: true,
+    cssEase: 'linear',
+    prevArrow: $('.js-vip-prev'),
+    nextArrow: $('.js-vip-next')
+  });
+
+  // Persons counter
+  class PersonsCounter {
+    constructor(el) {
+      this.$wrap  = $(el);
+      this.$value = this.$wrap.find('.js-counter-value');
+      this.min    = 1;
+      this.max    = 30;
+      this._bind();
+    }
+    _bind() {
+      this.$wrap.find('.js-counter-minus').on('click', () => this._change(-1));
+      this.$wrap.find('.js-counter-plus').on('click',  () => this._change(+1));
+    }
+    _change(delta) {
+      const next = parseInt(this.$value.text()) + delta;
+      if (next >= this.min && next <= this.max) this.$value.text(next);
+    }
+  }
+  $('.js-persons-counter').each(function() { new PersonsCounter(this); });
+
+  // Mobile menu
+  class MobileMenu {
+    constructor() {
+      this.$menu   = $('.js-mobile-menu');
+      this.$burger = $('.js-burger');
+      this._bind();
+    }
+    _bind() {
+      this.$burger.on('click', () => this.open());
+      $('.js-mobile-menu-close').on('click', () => this.close());
+    }
+    open()  { this.$menu.addClass('is-open'); $('body').addClass('lock'); }
+    close() { this.$menu.removeClass('is-open'); $('body').removeClass('lock'); }
+  }
+  new MobileMenu();
+
+  // Service tabs
+  $('.js-service-tab').on('click', function() {
+    $('.js-service-tab').removeClass('is-active');
+    $(this).addClass('is-active');
+  });
+
   $(".js-btn-modal").on("click", function (){
     const modal = $(this).data("modal");
     $("body").addClass("lock just-modal--default")

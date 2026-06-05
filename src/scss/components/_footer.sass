@@ -1,0 +1,130 @@
+// ─── Footer ──────────────────────────────────────────────────────────────────
+.footer
+  background: #0a0a0a
+  padding: 60px 160px 40px
+
+  &__inner
+    display: flex
+    flex-direction: column
+    gap: 40px
+
+  &__top
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 60px
+
+  &__logo
+    flex-shrink: 0
+    img
+      height: 34px
+      width: auto
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    gap: 14px
+
+  &__contact-item
+    display: flex
+    align-items: center
+    gap: 10px
+    font-family: $baseFont
+    font-size: 14px
+    color: rgba(255,255,255,0.6)
+    text-decoration: none
+    transition: color 0.3s ease
+    &:hover
+      color: $colorText
+    img
+      opacity: 0.5
+      flex-shrink: 0
+
+  &__socials
+    display: flex
+    gap: 12px
+    margin-top: 6px
+
+  &__social
+    display: flex
+    align-items: center
+    justify-content: center
+    opacity: 0.7
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 1
+    img
+      width: 32px
+      height: 32px
+
+  &__nav
+    display: flex
+    gap: 60px
+
+  &__nav-col
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: column
+    gap: 12px
+
+    a
+      font-family: $baseFont
+      font-size: 14px
+      color: rgba(255,255,255,0.5)
+      text-decoration: none
+      transition: color 0.3s ease
+      &:hover
+        color: $colorText
+
+  &__divider
+    border: none
+    border-top: 1px solid rgba(255,255,255,0.08)
+    margin: 0
+
+  &__bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 24px
+    flex-wrap: wrap
+
+  &__copy
+    font-family: $baseFont
+    font-size: 13px
+    color: rgba(255,255,255,0.3)
+    margin: 0
+
+  &__docs
+    display: flex
+    gap: 24px
+    flex-wrap: wrap
+    a
+      font-family: $baseFont
+      font-size: 13px
+      color: rgba(255,255,255,0.3)
+      text-decoration: none
+      transition: color 0.3s ease
+      &:hover
+        color: rgba(255,255,255,0.6)
+
+  +r($xxl)
+    padding: 60px 40px
+
+  +r($lg)
+    padding: 48px 20px
+    &__top
+      flex-direction: column
+      gap: 40px
+    &__nav
+      flex-wrap: wrap
+      gap: 32px
+
+  +r($sm)
+    &__bottom
+      flex-direction: column
+      align-items: flex-start
+    &__docs
+      flex-direction: column
+      gap: 12px

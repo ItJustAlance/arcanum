@@ -255,3 +255,498 @@ $aboutBg: #000
       margin-left: 0
       width: 100%
       padding-top: 0
+
+// ─── Menu Section ───────────────────────────────────────────────────────────
+.menu-section
+  // cards stack vertically, no extra padding
+
+.menu-card
+  position: relative
+  height: 640px
+  background: $colorBg
+  overflow: hidden
+
+  &__img
+    position: absolute
+    top: 0
+    right: 0
+    width: 57%
+    height: 100%
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    &::after
+      content: ''
+      position: absolute
+      inset: 0
+      background: linear-gradient(to right, #000 0%, rgba(0,0,0,0.54) 35%, rgba(0,0,0,0) 65%)
+
+  &__body
+    position: absolute
+    left: 160px
+    top: 50%
+    transform: translateY(-50%)
+    width: 567px
+    display: flex
+    flex-direction: column
+    gap: 44px
+    align-items: center
+    text-align: center
+    z-index: 1
+
+  &__texts
+    display: flex
+    flex-direction: column
+    gap: 22px
+
+  &__title
+    font-family: $fontDisplay
+    font-size: 34px
+    line-height: 48px
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 0
+    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+
+  &__text
+    font-family: $baseFont
+    font-size: 16px
+    line-height: 26px
+    color: $colorText
+    opacity: 0.6
+    margin: 0
+
+  .btn--menu
+    background: #913500
+    color: $colorText
+    border: none
+    border-radius: 30px
+    padding: 18px 52px
+    font-size: 15px
+    font-family: $baseFont
+    font-weight: 500
+    cursor: pointer
+    text-decoration: none
+    display: inline-block
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.85
+
+  &--2
+    .menu-card__img
+      right: auto
+      left: 0
+      &::after
+        background: linear-gradient(to left, #000 0%, rgba(0,0,0,0.54) 35%, rgba(0,0,0,0) 65%)
+    .menu-card__body
+      left: auto
+      right: 160px
+
+  +r($xxl)
+    height: auto
+    min-height: 500px
+    &__body
+      left: 40px
+      width: calc(50% - 80px)
+    &--2 .menu-card__body
+      right: 40px
+
+  +r($lg)
+    height: auto
+    &__img
+      position: relative
+      width: 100%
+      height: 300px
+      &::after
+        display: none
+    &__body
+      position: relative
+      left: auto
+      right: auto
+      top: auto
+      transform: none
+      width: 100%
+      padding: 40px 20px
+    &--2
+      .menu-card__img
+        left: 0
+      .menu-card__body
+        right: auto
+
+// ─── Service ─────────────────────────────────────────────────────────────────
+.service
+  background: $colorBg
+  padding: 80px 160px
+
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 80px
+
+  &__info
+    flex: 0 0 auto
+    width: 557px
+    display: flex
+    flex-direction: column
+    gap: 40px
+
+  &__title
+    font-family: $fontDisplay
+    font-size: 40px
+    line-height: 59px
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 0
+    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+
+  &__tabs
+    display: flex
+    flex-wrap: wrap
+    gap: 8px
+
+  &__tab
+    background: rgba(255,255,255,0.07)
+    color: rgba(255,255,255,0.5)
+    border: 1px solid rgba(255,255,255,0.12)
+    border-radius: 30px
+    padding: 10px 24px
+    font-size: 14px
+    font-family: $baseFont
+    font-weight: 500
+    cursor: pointer
+    transition: all 0.3s ease
+    &.is-active,
+    &:hover
+      background: rgba(255,255,255,0.15)
+      color: $colorText
+      border-color: rgba(255,255,255,0.3)
+
+  &__text
+    font-family: $baseFont
+    font-size: 16px
+    line-height: 26px
+    color: $colorText
+    opacity: 0.6
+    margin: 0
+
+  .btn--service
+    background: $colorText
+    color: $colorBg
+    border: none
+    border-radius: 50px
+    padding: 16px 40px
+    font-size: 15px
+    font-family: $baseFont
+    font-weight: 600
+    cursor: pointer
+    text-decoration: none
+    display: inline-block
+    align-self: flex-start
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.85
+
+  &__image
+    flex: 1
+    display: flex
+    justify-content: center
+    img
+      max-width: 100%
+      height: auto
+      max-height: 500px
+
+  +r($xxl)
+    padding: 60px 40px
+    &__info
+      width: 460px
+
+  +r($lg)
+    padding: 60px 20px
+    &__inner
+      flex-direction: column
+    &__info
+      width: 100%
+
+// ─── Events ──────────────────────────────────────────────────────────────────
+.events
+  background: $colorBg
+  padding: 60px 160px
+
+  &__inner
+    display: flex
+    align-items: flex-start
+    gap: 60px
+
+  &__intro
+    flex: 0 0 557px
+    display: flex
+    flex-direction: column
+    gap: 24px
+
+  &__title
+    font-family: $fontDisplay
+    font-size: 34px
+    line-height: 48px
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 0
+    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+
+  &__text
+    font-family: $baseFont
+    font-size: 16px
+    line-height: 26px
+    color: $colorText
+    opacity: 0.6
+    margin: 0
+
+  &__date
+    font-family: $baseFont
+    font-size: 14px
+    font-weight: 600
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorAccent
+    font-style: normal
+
+  &__cards
+    flex: 1
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 20px
+
+  &__card
+    display: flex
+    flex-direction: column
+    background: rgba(255,255,255,0.04)
+    border-radius: 16px
+    overflow: hidden
+
+  &__card-img
+    height: 229px
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__card-body
+    padding: 24px
+    display: flex
+    flex-direction: column
+    gap: 12px
+    flex: 1
+
+  &__card-title
+    font-family: $fontDisplay
+    font-size: 18px
+    line-height: 1.4
+    text-transform: uppercase
+    margin: 0
+    color: $colorText
+
+  &__card-text
+    font-family: $baseFont
+    font-size: 14px
+    line-height: 22px
+    color: $colorText
+    opacity: 0.6
+    margin: 0
+    flex: 1
+
+  .btn--ghost
+    background: transparent
+    color: $colorText
+    border: 1px solid rgba(255,255,255,0.25)
+    border-radius: 30px
+    padding: 10px 24px
+    font-size: 14px
+    font-family: $baseFont
+    font-weight: 500
+    cursor: pointer
+    text-decoration: none
+    display: inline-block
+    align-self: flex-start
+    transition: all 0.3s ease
+    &:hover
+      border-color: rgba(255,255,255,0.6)
+
+  +r($xxl)
+    padding: 60px 40px
+    &__intro
+      flex: 0 0 400px
+
+  +r($lg)
+    padding: 60px 20px
+    &__inner
+      flex-direction: column
+    &__intro
+      flex: none
+      width: 100%
+    &__cards
+      width: 100%
+
+  +r($sm)
+    &__cards
+      grid-template-columns: 1fr
+
+// ─── Booking ─────────────────────────────────────────────────────────────────
+.booking
+  background: $colorBg
+  padding: 80px 160px
+
+  &__inner
+    max-width: 960px
+    margin: 0 auto
+
+  &__title
+    font-family: $fontDisplay
+    font-size: 40px
+    line-height: 56px
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 0 0 48px
+    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+
+.booking-form
+  display: flex
+  flex-direction: column
+  gap: 16px
+
+  &__row
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 16px
+
+  &__input
+    background: rgba(255,255,255,0.06)
+    border: 1px solid rgba(255,255,255,0.12)
+    border-radius: 12px
+    padding: 16px 20px
+    font-family: $baseFont
+    font-size: 15px
+    color: $colorText
+    outline: none
+    width: 100%
+    transition: border-color 0.3s ease
+    &::placeholder
+      color: rgba(255,255,255,0.35)
+    &:focus
+      border-color: rgba(255,255,255,0.3)
+
+    &--full
+      grid-column: 1 / -1
+
+  &__counter-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__counter-label
+    font-family: $baseFont
+    font-size: 14px
+    color: rgba(255,255,255,0.35)
+
+  &__agree
+    display: flex
+    align-items: flex-start
+    gap: 12px
+    cursor: pointer
+    input[type="checkbox"]
+      width: 20px
+      height: 20px
+      flex-shrink: 0
+      margin-top: 2px
+      accent-color: $colorAccent
+    span
+      font-family: $baseFont
+      font-size: 13px
+      line-height: 20px
+      color: rgba(255,255,255,0.4)
+
+  &__submit
+    background: $colorText
+    color: $colorBg
+    border: none
+    border-radius: 50px
+    padding: 18px 48px
+    font-size: 15px
+    font-family: $baseFont
+    font-weight: 600
+    cursor: pointer
+    align-self: flex-start
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.85
+
+  +r($lg)
+    &__row
+      grid-template-columns: 1fr
+
+.persons-counter
+  display: flex
+  align-items: center
+  gap: 16px
+  button
+    width: 32px
+    height: 32px
+    background: rgba(255,255,255,0.1)
+    border: 1px solid rgba(255,255,255,0.2)
+    border-radius: 50%
+    color: $colorText
+    font-size: 18px
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    line-height: 1
+    transition: background 0.3s ease
+    &:hover
+      background: rgba(255,255,255,0.2)
+  .js-counter-value
+    font-family: $baseFont
+    font-size: 16px
+    color: $colorText
+    min-width: 24px
+    text-align: center
+
++r($xxl)
+  .booking
+    padding: 60px 40px
+
++r($lg)
+  .booking
+    padding: 60px 20px
+  .booking__title
+    font-size: 28px
+    line-height: 40px
+    margin-bottom: 32px
+
+// ─── Contacts / Map ──────────────────────────────────────────────────────────
+.contacts
+  &__map
+    iframe
+      display: block
+      width: 100%
+      height: 514px
+      border: none
+
+  +r($sm)
+    &__map iframe
+      height: 320px
