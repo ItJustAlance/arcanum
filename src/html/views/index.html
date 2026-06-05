@@ -40,12 +40,14 @@ var footerHtml = _.template(require('../includes/footer.html'))({
     <section class="about" id="about">
       <div class="about__inner">
         <div class="about__content">
-          <h2 class="about__title">Погрузитесь в атмосферу уюта и стиля</h2>
-          <p class="about__text">Наш интерьер сочетает мягкие зоны с премиальной обивкой, приглушенный свет и авторские блюда. Продуманная планировка обеспечивает приватность, а современные детали создают идеальную среду для релакса. У нас вы найдете уютные уголки для приватных встреч и просторные зоны для компаний, а также уникальные кальянные коктейли и авторские смеси.</p>
-          <address class="about__contacts">
-            <span class="about__address">г.Москва ул.Новоостаповская д.20</span>
-            <a class="about__phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
-          </address>
+          <div class="about__texts">
+            <h2 class="about__title">Погрузитесь в атмосферу уюта и стиля</h2>
+            <p class="about__text">Наш интерьер сочетает мягкие зоны с премиальной обивкой, приглушенный свет и авторские блюда. Продуманная планировка обеспечивает приватность, а современные детали создают идеальную среду для релакса. У нас вы найдете уютные уголки для приватных встреч и просторные зоны для компаний, а также уникальные кальянные коктейли и авторские смеси.</p>
+            <address class="about__contacts">
+              <span class="about__address">г.Москва ул.Новоостаповская д.20</span>
+              <a class="about__phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+            </address>
+          </div>
           <button class="btn btn--about js-btn-modal" data-modal="modal-booking">Подробнее о нас</button>
         </div>
         <div class="about__image">
