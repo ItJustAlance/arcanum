@@ -1,20 +1,32 @@
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<header class="header js-header">
+  <div class="header__inner">
 
-    <link rel="shortcut icon" href="img/favicon.ico" />
+    <nav class="header__nav-left">
+      <ul>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#interior">Интерьер</a></li>
+        <li><a href="#menu">Меню</a></li>
+      </ul>
+    </nav>
 
-    <title><%=title%></title>
-  </head>
-  <body>
-    <header class="header">
-      <img src="img/logo.png" id="logo" />
-      <svg class="svg-item">
-        <use xlink:href="#icon-logo"></use>
-      </svg>
-    </header>
-    
-  </body>
-</html>
+    <a class="header__logo" href="/">
+      <img src="img/logo.png" alt="Arcanum" width="215" height="45">
+    </a>
+
+    <nav class="header__nav-right">
+      <ul>
+        <li><a href="#events">Афиша</a></li>
+        <li><a href="#service">Сервис</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+        <li>
+          <button class="btn btn--booking js-btn-modal" data-modal="modal-booking">Бронь</button>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="header__burger js-burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
