@@ -6,6 +6,14 @@ $(function() {
     $('.js-header').toggleClass('is-scrolled', $(this).scrollTop() > 50);
   });
 
+  // Interior slider
+  $('.js-interior-slider').slick({
+    variableWidth: true,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+  });
+
   $(".js-btn-modal").on("click", function (){
     const modal = $(this).data("modal");
     $("body").addClass("lock just-modal--default")

@@ -55,6 +55,49 @@ var footerHtml = _.template(require('../includes/footer.html'))({
         </div>
       </div>
     </section>
+
+    <section class="interior" id="interior">
+      <div class="interior__slider js-interior-slider">
+        <div class="interior__slide interior__slide--short">
+          <div class="interior__img"><img src="img/interior-1.jpg" alt="Общий зал"></div>
+          <span class="interior__caption">Общий зал</span>
+        </div>
+        <div class="interior__slide interior__slide--tall">
+          <div class="interior__img"><img src="img/interior-2.jpg" alt="Общий зал"></div>
+          <span class="interior__caption">Общий зал</span>
+        </div>
+        <div class="interior__slide interior__slide--short">
+          <div class="interior__img"><img src="img/interior-3.jpg" alt="Общая зона"></div>
+          <span class="interior__caption">Общая зона</span>
+        </div>
+        <div class="interior__slide interior__slide--tall">
+          <div class="interior__img"><img src="img/interior-4.jpg" alt="Сцена"></div>
+          <span class="interior__caption">Сцена</span>
+        </div>
+        <div class="interior__slide interior__slide--short">
+          <div class="interior__img"><img src="img/interior-5.jpg" alt="Общая зона"></div>
+          <span class="interior__caption">Общая зона</span>
+        </div>
+        <div class="interior__slide interior__slide--tall">
+          <div class="interior__img"><img src="img/interior-6.jpg" alt="Зона для работы"></div>
+          <span class="interior__caption">Зона для работы</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="gastro">
+      <div class="gastro__bg">
+        <img src="img/gastro.jpg" alt="">
+      </div>
+      <div class="gastro__overlay"></div>
+      <div class="gastro__top">
+        <h2 class="gastro__title">Гастрономическое удовольствие</h2>
+        <p class="gastro__subtitle">Изысканные коктейли и блюда авторской кухни</p>
+      </div>
+      <div class="gastro__bottom">
+        <h3 class="gastro__label">Наше меню</h3>
+      </div>
+    </section>
   </main>
 
   <%= footerHtml %>

@@ -1,0 +1,49 @@
+// ─── Interior Slider ─────────────────────────────────────────────────────────
+.interior
+  background: $colorBg
+  padding: 60px 0 132px
+  overflow: hidden
+
+  &__img
+    border-radius: 16px
+    overflow: hidden
+
+    img
+      width: 100%
+      object-fit: cover
+      display: block
+
+  &__slide
+    width: 522px
+    padding: 0 8px
+    outline: none
+    box-sizing: content-box
+
+    &--short
+      .interior__img img
+        height: 298px
+
+    &--tall
+      .interior__img img
+        height: 390px
+
+  &__caption
+    display: block
+    margin-top: 12px
+    font-family: $baseFont
+    font-size: 16px
+    color: $colorText
+    opacity: 0.4
+
+  +r($lg)
+    padding: 40px 0 80px
+    &__slide--short .interior__img img
+      height: 220px
+    &__slide--tall .interior__img img
+      height: 280px
+
+  +r($sm)
+    padding: 32px 0 60px
+    &__slide--short .interior__img img,
+    &__slide--tall .interior__img img
+      height: 240px
