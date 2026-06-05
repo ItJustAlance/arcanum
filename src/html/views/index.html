@@ -99,43 +99,45 @@ var footerHtml = _.template(require('../includes/footer.html'))({
       </div>
     </section>
 
-    <section class="menu-section" id="menu">
-      <article class="menu-card menu-card--1">
-        <div class="menu-card__img">
-          <img src="img/menu-section-1.jpg" alt="Кальян">
-        </div>
-        <div class="menu-card__body">
-          <div class="menu-card__texts">
-            <h3 class="menu-card__title">Кальян</h3>
-            <p class="menu-card__text">В нашем меню кальянов — только лучшие сочетания вкусов и премиальные смеси. Мы предлагаем как классические, так и авторские миксы. Атмосфера уюта и лёгкий ароматный дым создадут настроение для отдыха в компании друзей или наедине с собой.</p>
+    <section class="menu-oval" id="menu">
+      <div class="menu-oval__inner">
+        <article class="menu-oval__card">
+          <div class="menu-oval__img">
+            <img src="img/menu-hookah.jpg" alt="Кальян">
           </div>
-          <a href="#" class="btn btn--menu">Меню</a>
-        </div>
-      </article>
-      <article class="menu-card menu-card--2">
-        <div class="menu-card__img">
-          <img src="img/menu-section-2.jpg" alt="Основное меню">
-        </div>
-        <div class="menu-card__body">
-          <div class="menu-card__texts">
-            <h3 class="menu-card__title">Основное меню</h3>
-            <p class="menu-card__text">В меню — блюда европейской и азиатской кухни, а также авторские позиции от шефа. Идеальное сопровождение для любого напитка или кальяна. Кухня порадует разнообразием: от лёгких закусок и салатов до сытных горячих блюд и десертов.</p>
+          <div class="menu-oval__hover">
+            <div class="menu-oval__content">
+              <h3 class="menu-oval__title">Кальян</h3>
+              <p class="menu-oval__text">В нашем меню кальянов — только лучшие сочетания вкусов и премиальные смеси. Мы предлагаем как классические, так и авторские миксы. Атмосфера уюта и лёгкий ароматный дым создадут настроение для отдыха в компании друзей или наедине с собой.</p>
+            </div>
+            <a href="#" class="btn--oval">Меню</a>
           </div>
-          <a href="#" class="btn btn--menu">Меню</a>
-        </div>
-      </article>
-      <article class="menu-card menu-card--3">
-        <div class="menu-card__img">
-          <img src="img/menu-section-3.png" alt="Барная карта">
-        </div>
-        <div class="menu-card__body">
-          <div class="menu-card__texts">
-            <h3 class="menu-card__title">Барная карта</h3>
-            <p class="menu-card__text">Классические коктейли и авторские рецепты. В ассортименте — крепкие напитки, ликёры, вермуты, а также безалкогольные варианты для тех, кто предпочитает лёгкие и свежие вкусы. Наши бармены всегда готовы удивить не только вкусом, но и оригинальной подачей.</p>
+        </article>
+        <article class="menu-oval__card">
+          <div class="menu-oval__img">
+            <img src="img/menu-food.jpg" alt="Основное меню">
           </div>
-          <a href="#" class="btn btn--menu">Меню</a>
-        </div>
-      </article>
+          <div class="menu-oval__hover">
+            <div class="menu-oval__content">
+              <h3 class="menu-oval__title">Основное меню</h3>
+              <p class="menu-oval__text">В меню — блюда европейской и азиатской кухни, а также авторские позиции от шефа. Идеальное сопровождение для любого напитка или кальяна. Кухня порадует разнообразием: от лёгких закусок и салатов до сытных горячих блюд и десертов.</p>
+            </div>
+            <a href="#" class="btn--oval">Меню</a>
+          </div>
+        </article>
+        <article class="menu-oval__card">
+          <div class="menu-oval__img">
+            <img src="img/menu-bar.jpg" alt="Барная карта">
+          </div>
+          <div class="menu-oval__hover">
+            <div class="menu-oval__content">
+              <h3 class="menu-oval__title">Барная карта</h3>
+              <p class="menu-oval__text">Классические коктейли и авторские рецепты. В ассортименте — крепкие напитки, ликёры, вермуты, а также безалкогольные варианты для тех, кто предпочитает лёгкие и свежие вкусы. Наши бармены всегда готовы удивить не только вкусом, но и оригинальной подачей.</p>
+            </div>
+            <a href="#" class="btn--oval">Меню</a>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="service" id="service">
@@ -162,7 +164,7 @@ var footerHtml = _.template(require('../includes/footer.html'))({
           <h2 class="events__title">Скоро открытие лаунж&#8209;пространства</h2>
           <p class="events__text">Авторские коктейли и атмосфера премиального комфорта ждут вас в центре Москвы</p>
           <time class="events__date">1 июня 2026</time>
-          <button class="btn btn--booking js-btn-modal" data-modal="modal-booking">Забронировать</button>
+          <button class="btn--primary js-btn-modal" data-modal="modal-booking">Забронировать</button>
         </div>
         <div class="events__cards">
           <article class="events__card">
@@ -172,7 +174,7 @@ var footerHtml = _.template(require('../includes/footer.html'))({
             <div class="events__card-body">
               <h4 class="events__card-title">Скоро открытие</h4>
               <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
-              <a href="#" class="btn btn--ghost">Подробнее</a>
+              <a href="#" class="events__more">Подробнее →</a>
             </div>
           </article>
           <article class="events__card">
@@ -182,7 +184,7 @@ var footerHtml = _.template(require('../includes/footer.html'))({
             <div class="events__card-body">
               <h4 class="events__card-title">Специальное событие</h4>
               <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
-              <a href="#" class="btn btn--ghost">Подробнее</a>
+              <a href="#" class="events__more">Подробнее →</a>
             </div>
           </article>
         </div>
@@ -230,7 +232,7 @@ var footerHtml = _.template(require('../includes/footer.html'))({
             <input type="checkbox" required>
             <span>Нажимая «забронировать стол», я подтверждаю согласие с политикой конфиденциальности</span>
           </label>
-          <button type="submit" class="btn booking-form__submit">Забронировать стол</button>
+          <button type="submit" class="booking-form__submit">Забронировать стол</button>
         </form>
       </div>
     </section>

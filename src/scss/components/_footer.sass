@@ -1,49 +1,82 @@
 // ─── Footer ──────────────────────────────────────────────────────────────────
 .footer
   background: #0a0a0a
-  padding: 60px 160px 40px
+  padding: 56px 160px 40px
 
   &__inner
     display: flex
     flex-direction: column
-    gap: 40px
+    gap: 28px
 
   &__top
     display: flex
     align-items: flex-start
-    justify-content: space-between
-    gap: 60px
+    gap: 0
+    padding-bottom: 0
 
   &__logo
     flex-shrink: 0
+    margin-right: 0
     img
-      height: 34px
+      height: 37px
       width: auto
+
+  &__nav
+    display: flex
+    gap: 92px
+    padding: 6px 210px 6px 177px
+    flex: 1
+
+  &__nav-col
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: column
+    gap: 25px
+
+    a
+      font-family: $baseFont
+      font-size: 14px
+      font-weight: 600
+      letter-spacing: 1px
+      text-transform: uppercase
+      color: $colorText
+      text-decoration: none
+      transition: opacity 0.3s ease
+      &:hover
+        opacity: 0.7
 
   &__contacts
     display: flex
     flex-direction: column
-    gap: 14px
+    gap: 20px
+    padding: 6px 0
+    flex-shrink: 0
+    width: 360px
 
   &__contact-item
     display: flex
     align-items: center
-    gap: 10px
+    gap: 14px
     font-family: $baseFont
-    font-size: 14px
-    color: rgba(255,255,255,0.6)
+    font-size: 15px
+    font-weight: 600
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorText
     text-decoration: none
-    transition: color 0.3s ease
+    transition: opacity 0.3s ease
     &:hover
-      color: $colorText
+      opacity: 0.7
     img
-      opacity: 0.5
       flex-shrink: 0
+      opacity: 0.8
 
   &__socials
     display: flex
-    gap: 12px
-    margin-top: 6px
+    gap: 20px
+    padding: 14px 0
 
   &__social
     display: flex
@@ -53,28 +86,21 @@
     transition: opacity 0.3s ease
     &:hover
       opacity: 1
-    img
-      width: 32px
-      height: 32px
 
-  &__nav
-    display: flex
-    gap: 60px
-
-  &__nav-col
-    list-style: none
-    margin: 0
-    padding: 0
+  &__docs
     display: flex
     flex-direction: column
-    gap: 12px
-
+    gap: 6px
+    padding: 6px 0
+    flex-shrink: 0
+    width: 278px
     a
       font-family: $baseFont
-      font-size: 14px
-      color: rgba(255,255,255,0.5)
+      font-size: 13px
+      color: rgba(255,255,255,0.6)
       text-decoration: none
-      transition: color 0.3s ease
+      line-height: 24px
+      transition: opacity 0.3s ease
       &:hover
         color: $colorText
 
@@ -85,46 +111,42 @@
 
   &__bottom
     display: flex
+    justify-content: center
     align-items: center
-    justify-content: space-between
-    gap: 24px
-    flex-wrap: wrap
+    padding-top: 4px
 
   &__copy
     font-family: $baseFont
-    font-size: 13px
-    color: rgba(255,255,255,0.3)
+    font-size: 14px
+    font-weight: 600
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #7a7a7a
+    opacity: 0.5
     margin: 0
-
-  &__docs
-    display: flex
-    gap: 24px
-    flex-wrap: wrap
-    a
-      font-family: $baseFont
-      font-size: 13px
-      color: rgba(255,255,255,0.3)
-      text-decoration: none
-      transition: color 0.3s ease
-      &:hover
-        color: rgba(255,255,255,0.6)
+    text-align: center
 
   +r($xxl)
-    padding: 60px 40px
+    padding: 56px 40px 40px
+    &__nav
+      padding: 6px 40px 6px 60px
+      gap: 40px
 
   +r($lg)
-    padding: 48px 20px
+    padding: 48px 20px 40px
     &__top
       flex-direction: column
       gap: 40px
     &__nav
+      padding: 0
       flex-wrap: wrap
       gap: 32px
+    &__contacts
+      width: 100%
+    &__docs
+      width: 100%
 
   +r($sm)
     &__bottom
-      flex-direction: column
-      align-items: flex-start
-    &__docs
       flex-direction: column
       gap: 12px
