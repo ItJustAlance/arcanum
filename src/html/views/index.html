@@ -1,19 +1,32 @@
 <%
 var data = {
-title: "Arcanum Lounge",
-copyright: "Arcanum"
+  title: "Arcanum Lounge",
+  copyright: "Arcanum"
 };
 
 var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);
 var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);
 
 var footerHtml = _.template(require('../includes/footer.html'))({
-...data,
-mobileFooter,
-mobileMenu
+  ...data,
+  mobileFooter,
+  mobileMenu
 });
-%>
+%><!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= data.title %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+<body>
 
 <div class="over">
   <%= footerHtml %>
 </div>
+
+</body>
+</html>

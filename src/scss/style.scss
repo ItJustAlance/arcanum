@@ -31,6 +31,9 @@
 @import 'components/header';
 @import 'components/footer';
 @import 'components/modals';
+@import '../../node_modules/slick-carousel/slick/slick.css';
+@import '../../node_modules/slick-carousel/slick/slick-theme.css';
+@import 'components/sliders';
 
 // ====================  Pages  ======================
 @import "pages/pages";

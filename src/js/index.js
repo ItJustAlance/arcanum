@@ -1,4 +1,5 @@
 import "bootstrap";
+import "slick-carousel";
 import "./static-js";
 
 // Автоматически импортировать ВСЕ SVG из src/icons
