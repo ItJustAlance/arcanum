@@ -150,18 +150,25 @@ $aboutBg: #000
       inset: 0
       background: linear-gradient(271.4deg, rgba(0, 0, 0, 0) 64.6%, #000000 98.69%), linear-gradient(86.52deg, rgba(0, 0, 0, 0) 46.41%, #000000 98.43%), linear-gradient(179.26deg, rgba(0, 0, 0, 0) 58.46%, #000000 99.33%), linear-gradient(360deg, rgba(0, 0, 0, 0) 62.27%, #000000 100%)
 
-    +r($xxl)
+  +r($xxl)
     padding: 60px 40px
-
-  +r($lg)
-    padding: 48px 20px
     &__inner
       flex-direction: column
     &__content
       width: 100%
     &__image
       width: 100%
-      height: 300px
+      height: 480px
+
+  +r($lg)
+    padding: 48px 20px
+    &__image
+      height: 340px
+
+  +r($sm)
+    padding: 40px 20px
+    &__image
+      height: 260px
 
 // ─── Gastro ─────────────────────────────────────────────────────────────────
 .gastro
@@ -524,15 +531,16 @@ $aboutBg: #000
 
   +r($xxl)
     padding: 60px 40px
-    &__info
-      width: 460px
-
-  +r($lg)
-    padding: 60px 20px
     &__inner
       flex-direction: column
     &__info
       width: 100%
+
+  +r($lg)
+    padding: 60px 20px
+
+  +r($sm)
+    padding: 40px 20px
 
 // ─── Events ──────────────────────────────────────────────────────────────────
 .events
@@ -585,7 +593,9 @@ $aboutBg: #000
     overflow: hidden
     flex: 0 1 100%
     position: relative
-    padding: 0 60px
+    padding: 0
+    display: flex
+    gap: 16px
     
     .events__arrow
       position: absolute
@@ -651,6 +661,7 @@ $aboutBg: #000
     background: #111
     border-radius: 0
     overflow: hidden
+    flex: 1
 
   &__card-img
     height: 201px
@@ -701,11 +712,6 @@ $aboutBg: #000
 
   +r($xxl)
     padding: 60px 40px
-    &__intro
-      flex: 0 0 400px
-
-  +r($lg)
-    padding: 60px 20px
     &__inner
       flex-direction: column
     &__intro
@@ -714,9 +720,13 @@ $aboutBg: #000
     &__cards
       width: 100%
 
+  +r($lg)
+    padding: 60px 20px
+
   +r($sm)
+    padding: 40px 20px
     &__cards
-      grid-template-columns: 1fr
+      flex-direction: column
 
 // ─── Booking ─────────────────────────────────────────────────────────────────
 .booking
@@ -853,6 +863,17 @@ $aboutBg: #000
     font-size: 28px
     line-height: 40px
     margin-bottom: 32px
+
++r($sm)
+  .booking
+    padding: 40px 20px
+  .booking__title
+    font-size: 22px
+    line-height: 32px
+    margin-bottom: 24px
+  .booking-form__submit
+    width: 100%
+    padding: 14px 20px
 
 // ─── Contacts / Map ──────────────────────────────────────────────────────────
 .contacts

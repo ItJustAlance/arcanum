@@ -128,23 +128,44 @@
 
   +r($xxl)
     padding: 56px 40px 40px
+    &__top
+      flex-wrap: wrap
+      row-gap: 32px
+    &__logo
+      flex: 0 0 100%
+    &__contacts
+      order: 1
+      flex: 1
+      width: auto
     &__nav
-      padding: 6px 40px 6px 60px
+      order: 2
+      flex: 0 0 auto
+      padding: 0
       gap: 40px
+    &__docs
+      order: 3
+      flex: 0 0 100%
+      flex-direction: row
+      flex-wrap: wrap
+      gap: 16px
 
   +r($lg)
     padding: 48px 20px 40px
     &__top
       flex-direction: column
-      gap: 40px
-    &__nav
-      padding: 0
-      flex-wrap: wrap
       gap: 32px
+    &__nav
+      flex-direction: row
+      flex-wrap: wrap
+      padding: 0
+      gap: 24px
     &__contacts
       width: 100%
     &__docs
       width: 100%
+      flex-direction: row
+      flex-wrap: wrap
+      gap: 12px
 
   +r($sm)
     &__bottom
