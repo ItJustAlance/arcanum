@@ -1,0 +1,169 @@
+// ─── Interior Slider ─────────────────────────────────────────────────────────
+.interior
+  //background: $colorBg
+  padding: 60px 0 132px
+  overflow: hidden
+
+  &__img
+    border-radius: 16px
+    overflow: hidden
+    padding: 8px
+    img
+      width: 100%
+      object-fit: cover
+      display: block
+
+  &__slider
+    max-width: 100vw
+
+  &__slide
+    width: 522px
+    padding: 0 8px
+    outline: none
+    box-sizing: content-box
+
+    &--short
+      .interior__img img
+        height: 298px
+
+    &--tall
+      .interior__img img
+        height: 390px
+
+  &__caption
+    display: block
+    margin-top: 12px
+    font-family: $baseFont
+    font-size: 16px
+    color: $colorText
+    opacity: 0.4
+
+  +r($lg)
+    padding: 40px 0 80px
+    &__slide--short .interior__img img
+      height: 220px
+    &__slide--tall .interior__img img
+      height: 280px
+
+  +r($sm)
+    padding: 32px 0 60px
+    &__slide--short .interior__img img,
+    &__slide--tall .interior__img img
+      height: 240px
+
+// ─── VIP Slider ──────────────────────────────────────────────────────────────
+.vip
+  position: relative
+  height: 866px
+  overflow: hidden
+
+  &__slider
+    height: 100%
+    max-width: 100vw
+
+    .slick-list,
+    .slick-track
+      height: 100%
+
+    .slick-slide > div
+      height: 100%
+
+  &__slide
+    position: relative
+    height: 866px
+    overflow: hidden
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display: block
+
+    &::after
+      content: ''
+      position: absolute
+      inset: 0
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 50%)
+
+  &__arrow
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 10
+    width: 56px
+    height: 56px
+    background: rgba(255,255,255,0.1)
+    border: 1px solid rgba(255,255,255,0.2)
+    border-radius: 50%
+    cursor: pointer
+    backdrop-filter: blur(4px)
+    transition: background 0.3s ease
+    &:hover
+      background: rgba(255,255,255,0.2)
+    &::before
+      content: ''
+      display: block
+      width: 10px
+      height: 10px
+      border-top: 2px solid $colorText
+      border-right: 2px solid $colorText
+      position: absolute
+      top: 50%
+      left: 50%
+    &--prev
+      left: 40px
+      &::before
+        transform: translate(-30%, -50%) rotate(-135deg)
+    &--next
+      right: 40px
+      &::before
+        transform: translate(-70%, -50%) rotate(45deg)
+
+  &__text
+    position: absolute
+    bottom: 60px
+    left: 0
+    right: 0
+    text-align: center
+    z-index: 5
+    padding: 0 40px
+
+  &__title
+    font-family: $fontDisplay
+    font-size: 48px
+    line-height: 1.3
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 0 0 16px
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+
+  &__subtitle
+    font-family: $baseFont
+    font-size: 16px
+    line-height: 26px
+    color: $colorText
+    opacity: 0.7
+    margin: 0
+    text-transform: uppercase
+
+  +r($lg)
+    height: 560px
+    &__slide
+      height: 560px
+    &__title
+      font-size: 32px
+
+  +r($sm)
+    height: 400px
+    &__slide
+      height: 400px
+    &__title
+      font-size: 24px
+    &__arrow
+      width: 40px
+      height: 40px
+    &__text
+      bottom: 40px

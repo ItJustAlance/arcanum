@@ -107,3 +107,121 @@
       background: $colorText
       border-radius: 2px
       transition: all 0.3s ease
+
+// ─── Mobile Menu ─────────────────────────────────────────────────────────────
+.mobile-menu
+  position: fixed
+  inset: 0
+  z-index: 200
+  pointer-events: none
+  opacity: 0
+  transition: opacity 0.3s ease
+
+  &.is-open
+    pointer-events: all
+    opacity: 1
+
+  &__overlay
+    position: absolute
+    inset: 0
+    background: rgba(0,0,0,0.6)
+    backdrop-filter: blur(4px)
+
+  &__inner
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    width: 320px
+    background: #111
+    display: flex
+    flex-direction: column
+    padding: 0 0 40px
+    transform: translateX(-100%)
+    transition: transform 0.35s ease
+
+  .is-open &__inner
+    transform: translateX(0)
+
+  &__header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 20px 24px
+    border-bottom: 1px solid rgba(255,255,255,0.08)
+
+  &__logo img
+    height: 34px
+    width: auto
+
+  &__close
+    width: 32px
+    height: 32px
+    background: none
+    border: none
+    cursor: pointer
+    position: relative
+    span
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 18px
+      height: 2px
+      background: $colorText
+      border-radius: 2px
+      &:first-child
+        transform: translate(-50%, -50%) rotate(45deg)
+      &:last-child
+        transform: translate(-50%, -50%) rotate(-45deg)
+
+  &__info
+    padding: 24px 24px 0
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+  &__info-item
+    font-family: $baseFont
+    font-size: 13px
+    color: rgba(255,255,255,0.4)
+    text-decoration: none
+    letter-spacing: 0.5px
+
+  &__nav
+    flex: 1
+    padding: 32px 24px
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+      display: flex
+      flex-direction: column
+      gap: 4px
+    a
+      display: block
+      padding: 12px 0
+      font-family: $baseFont
+      font-size: 18px
+      font-weight: 600
+      letter-spacing: 1px
+      text-transform: uppercase
+      color: $colorText
+      text-decoration: none
+      border-bottom: 1px solid rgba(255,255,255,0.06)
+      transition: color 0.3s ease
+      &:hover
+        color: $colorAccent
+
+  &__book
+    margin: 0 24px
+    font-family: $baseFont
+    font-size: 16px
+    font-weight: 600
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorAccent
+    text-decoration: none
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.7

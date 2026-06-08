@@ -1,0 +1,152 @@
+// ─── Footer ──────────────────────────────────────────────────────────────────
+.footer
+  background: #0a0a0a
+  padding: 56px 160px 40px
+
+  &__inner
+    display: flex
+    flex-direction: column
+    gap: 28px
+
+  &__top
+    display: flex
+    align-items: flex-start
+    gap: 0
+    padding-bottom: 0
+
+  &__logo
+    flex-shrink: 0
+    margin-right: 0
+    img
+      height: 37px
+      width: auto
+
+  &__nav
+    display: flex
+    gap: 92px
+    padding: 6px 150px 6px 150px
+    flex: 1
+
+  &__nav-col
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: column
+    gap: 25px
+
+    a
+      font-family: $baseFont
+      font-size: 14px
+      font-weight: 600
+      letter-spacing: 1px
+      text-transform: uppercase
+      color: $colorText
+      text-decoration: none
+      transition: opacity 0.3s ease
+      &:hover
+        opacity: 0.7
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding: 6px 0
+    flex-shrink: 0
+    width: 420px
+
+  &__contact-item
+    display: flex
+    align-items: center
+    gap: 14px
+    font-family: $baseFont
+    font-size: 15px
+    font-weight: 600
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorText
+    text-decoration: none
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.7
+    img
+      flex-shrink: 0
+      opacity: 0.8
+
+  &__socials
+    display: flex
+    gap: 20px
+    padding: 14px 0
+
+  &__social
+    display: flex
+    align-items: center
+    justify-content: center
+    opacity: 0.7
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 1
+
+  &__docs
+    display: flex
+    flex-direction: column
+    gap: 6px
+    padding: 6px 0
+    flex-shrink: 0
+    width: 278px
+    a
+      font-family: $baseFont
+      font-size: 13px
+      color: rgba(255,255,255,0.6)
+      text-decoration: none
+      line-height: 24px
+      transition: opacity 0.3s ease
+      &:hover
+        color: $colorText
+
+  &__divider
+    border: none
+    border-top: 1px solid rgba(255,255,255,0.08)
+    margin: 0
+
+  &__bottom
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 4px
+
+  &__copy
+    font-family: $baseFont
+    font-size: 14px
+    font-weight: 600
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #7a7a7a
+    opacity: 0.5
+    margin: 0
+    text-align: center
+
+  +r($xxl)
+    padding: 56px 40px 40px
+    &__nav
+      padding: 6px 40px 6px 60px
+      gap: 40px
+
+  +r($lg)
+    padding: 48px 20px 40px
+    &__top
+      flex-direction: column
+      gap: 40px
+    &__nav
+      padding: 0
+      flex-wrap: wrap
+      gap: 32px
+    &__contacts
+      width: 100%
+    &__docs
+      width: 100%
+
+  +r($sm)
+    &__bottom
+      flex-direction: column
+      gap: 12px

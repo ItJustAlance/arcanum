@@ -1,1 +1,32 @@
-<div class="mobile-menu">mobile-menu</div>
+<div class="mobile-menu js-mobile-menu">
+  <div class="mobile-menu__overlay js-mobile-menu-close"></div>
+  <div class="mobile-menu__inner">
+    <div class="mobile-menu__header">
+      <a class="mobile-menu__logo" href="/">
+        <img src="img/logo.png" alt="Arcanum" height="34">
+      </a>
+      <button class="mobile-menu__close js-mobile-menu-close" aria-label="Закрыть">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu__info">
+      <a href="https://yandex.ru/maps/" class="mobile-menu__info-item" target="_blank">г.Москва ул.Новоостаповская д.20</a>
+      <a href="tel:+70000000000" class="mobile-menu__info-item">+7 (000) 000-00-00</a>
+    </div>
+
+    <nav class="mobile-menu__nav">
+      <ul>
+        <li><a href="#interior" class="js-mobile-menu-close">Интерьер</a></li>
+        <li><a href="#menu" class="js-mobile-menu-close">Меню</a></li>
+        <li><a href="#events" class="js-mobile-menu-close">Афиша</a></li>
+        <li><a href="#service" class="js-mobile-menu-close">Сервис</a></li>
+        <li><a href="#contacts" class="js-mobile-menu-close">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <a class="mobile-menu__book js-btn-modal js-mobile-menu-close" data-modal="modal-booking" href="#">
+      Бронь →
+    </a>
+  </div>
+</div>

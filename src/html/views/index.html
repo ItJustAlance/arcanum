@@ -48,11 +48,243 @@ var footerHtml = _.template(require('../includes/footer.html'))({
               <a class="about__phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
             </address>
           </div>
-          <button class="btn btn--about js-btn-modal" data-modal="modal-booking">Подробнее о нас</button>
+          <div class="b-btn">
+            <button class="btn btn--about js-btn-modal" data-modal="modal-booking">Подробнее о нас</button>
+          </div>
+          
         </div>
         <div class="about__image">
-          <img src="img/about.jpg" alt="Интерьер Arcanum">
+          <img src="img/about.png" alt="Интерьер Arcanum">
         </div>
+      </div>
+    </section>
+
+    <section class="interior" id="interior">
+      <div class="interior__slider js-interior-slider">
+        <div class="interior__slide interior__slide--short">
+          <div class="interior__img"><img src="img/interior-1.jpg" alt="Общий зал"></div>
+          <span class="interior__caption">Общий зал</span>
+        </div>
+        <div class="interior__slide interior__slide--tall">
+          <div class="interior__img"><img src="img/interior-2.jpg" alt="Общий зал"></div>
+          <span class="interior__caption">Общий зал</span>
+        </div>
+        <div class="interior__slide interior__slide--short">
+          <div class="interior__img"><img src="img/interior-3.jpg" alt="Общая зона"></div>
+          <span class="interior__caption">Общая зона</span>
+        </div>
+        <div class="interior__slide interior__slide--tall">
+          <div class="interior__img"><img src="img/interior-4.jpg" alt="Сцена"></div>
+          <span class="interior__caption">Сцена</span>
+        </div>
+        <div class="interior__slide interior__slide--short">
+          <div class="interior__img"><img src="img/interior-5.jpg" alt="Общая зона"></div>
+          <span class="interior__caption">Общая зона</span>
+        </div>
+        <div class="interior__slide interior__slide--tall">
+          <div class="interior__img"><img src="img/interior-6.jpg" alt="Зона для работы"></div>
+          <span class="interior__caption">Зона для работы</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="gastro">
+      <div class="gastro__bg">
+        <img src="img/gastro-img.gif" alt="">
+      </div>
+      <div class="gastro__overlay"></div>
+      <div class="gastro__top">
+        <h2 class="gastro__title">Гастрономическое удовольствие</h2>
+        <p class="gastro__subtitle">Изысканные коктейли и блюда авторской кухни</p>
+      </div>
+      <div class="gastro__bottom">
+        <h3 class="gastro__label">Наше меню</h3>
+      </div>
+    </section>
+
+    <section class="menu-oval" id="menu">
+      <div class="menu-oval__inner">
+        <article class="menu-oval__card">
+          <div class="menu-oval__img">
+            <img src="img/menu-hookah.jpg" alt="Кальян">
+          </div>
+          <div class="menu-oval__hover">
+            <div class="menu-oval__content">
+              <h3 class="menu-oval__title">Кальян</h3>
+              <p class="menu-oval__text">В нашем меню кальянов — только лучшие сочетания вкусов и премиальные смеси. Мы предлагаем как классические, так и авторские миксы. Атмосфера уюта и лёгкий ароматный дым создадут настроение для отдыха в компании друзей или наедине с собой.</p>
+            </div>
+            <a href="#" class="btn--oval">Меню</a>
+          </div>
+        </article>
+        <article class="menu-oval__card">
+          <div class="menu-oval__img">
+            <img src="img/menu-food.jpg" alt="Основное меню">
+          </div>
+          <div class="menu-oval__hover">
+            <div class="menu-oval__content">
+              <h3 class="menu-oval__title">Основное меню</h3>
+              <p class="menu-oval__text">В меню — блюда европейской и азиатской кухни, а также авторские позиции от шефа. Идеальное сопровождение для любого напитка или кальяна. Кухня порадует разнообразием: от лёгких закусок и салатов до сытных горячих блюд и десертов.</p>
+            </div>
+            <a href="#" class="btn--oval">Меню</a>
+          </div>
+        </article>
+        <article class="menu-oval__card">
+          <div class="menu-oval__img">
+            <img src="img/menu-bar.jpg" alt="Барная карта">
+          </div>
+          <div class="menu-oval__hover">
+            <div class="menu-oval__content">
+              <h3 class="menu-oval__title">Барная карта</h3>
+              <p class="menu-oval__text">Классические коктейли и авторские рецепты. В ассортименте — крепкие напитки, ликёры, вермуты, а также безалкогольные варианты для тех, кто предпочитает лёгкие и свежие вкусы. Наши бармены всегда готовы удивить не только вкусом, но и оригинальной подачей.</p>
+            </div>
+            <a href="#" class="btn--oval">Меню</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="service" id="service">
+      <div class="service__inner">
+        <div class="service__info">
+          <h2 class="service__title">Сервис</h2>
+          <div class="service__tabs">
+            <button class="service__tab is-active js-service-tab">Система лояльности</button>
+            <button class="service__tab js-service-tab">Акции</button>
+            <button class="service__tab js-service-tab">Аренда зала</button>
+          </div>
+          <p class="service__text">Скачайте приложение, чтобы получать скидки, следить за акциями и бронировать столики в несколько кликов. Программа лояльности позволяет копить баллы и обменивать их на привилегии.</p>
+          <a href="#" class="btn btn--service">Скачать приложение</a>
+        </div>
+        <div class="service__image">
+          <img src="img/service.png" alt="Приложение Arcanum">
+        </div>
+      </div>
+    </section>
+
+    <section class="events" id="events">
+      <div class="events__inner">
+        <div class="events__intro">
+          <h2 class="events__title">Скоро открытие лаунж&#8209;пространства</h2>
+          <p class="events__text">Авторские коктейли и атмосфера премиального комфорта ждут вас в центре Москвы</p>
+          <time class="events__date">1 июня 2026</time>
+          <div class="btn-box">
+            <button class="btn-event btn--primary js-btn-modal" data-modal="modal-booking">Забронировать</button>
+          </div>
+        </div>
+        <div class="events__cards">
+          <div class="events__cards-slider js-events-slider">
+            <div class="events__cards-slide">
+              <article class="events__card">
+                <div class="events__card-img">
+                  <img src="img/events-1.png" alt="">
+                </div>
+                <div class="events__card-body">
+                  <h4 class="events__card-title">Скоро открытие</h4>
+                  <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                  <a href="#" class="events__more">Подробнее →</a>
+                </div>
+              </article>
+            </div>
+            <div class="events__cards-slide">
+              <article class="events__card">
+                <div class="events__card-img">
+                  <img src="img/events-2.png" alt="">
+                </div>
+                <div class="events__card-body">
+                  <h4 class="events__card-title">Специальное событие</h4>
+                  <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
+                  <a href="#" class="events__more">Подробнее →</a>
+                </div>
+              </article>
+            </div>
+            <div class="events__cards-slide">
+              <article class="events__card">
+                <div class="events__card-img">
+                  <img src="img/events-2.png" alt="">
+                </div>
+                <div class="events__card-body">
+                  <h4 class="events__card-title">Специальное событие</h4>
+                  <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
+                  <a href="#" class="events__more">Подробнее →</a>
+                </div>
+              </article>
+            </div>
+            <div class="events__cards-slide">
+              <article class="events__card">
+                <div class="events__card-img">
+                  <img src="img/events-2.png" alt="">
+                </div>
+                <div class="events__card-body">
+                  <h4 class="events__card-title">Специальное событие</h4>
+                  <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
+                  <a href="#" class="events__more">Подробнее →</a>
+                </div>
+              </article>
+            </div>
+            
+          </div>
+          <button class="events__arrow events__arrow--prev js-events-prev" aria-label="Назад"></button>
+          <button class="events__arrow events__arrow--next js-events-next" aria-label="Вперёд"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="vip">
+      <div class="vip__slider js-vip-slider">
+        <div class="vip__slide">
+          <img src="img/vip.png" alt="VIP зал">
+        </div>
+        <div class="vip__slide">
+          <img src="img/vip.png" alt="VIP зал">
+        </div>
+      </div>
+      <button class="vip__arrow vip__arrow--prev js-vip-prev" aria-label="Назад"></button>
+      <button class="vip__arrow vip__arrow--next js-vip-next" aria-label="Вперёд"></button>
+      <div class="vip__text">
+        <h2 class="vip__title">Вип-залы для вашего отдыха</h2>
+        <p class="vip__subtitle">Мы продумали каждую деталь, чтобы вам было комфортно</p>
+      </div>
+    </section>
+
+    <section class="booking" id="booking">
+      <div class="booking__inner">
+        <h2 class="booking__title">Забронируйте пространство<br>в центре столицы</h2>
+        <form class="booking-form">
+          <div class="booking-form__row">
+            <input class="booking-form__input" name="name" placeholder="Ваше имя" required>
+            <input class="booking-form__input" name="phone" placeholder="Номер телефона" required>
+          </div>
+          <div class="booking-form__row">
+            <input class="booking-form__input" name="datetime" placeholder="Дата и время" required>
+            <div class="booking-form__input booking-form__counter-wrap">
+              <span class="booking-form__counter-label">Количество персон</span>
+              <div class="persons-counter js-persons-counter">
+                <button type="button" class="js-counter-minus">−</button>
+                <span class="js-counter-value">1</span>
+                <button type="button" class="js-counter-plus">+</button>
+              </div>
+            </div>
+          </div>
+          <input class="booking-form__input booking-form__input--full" name="comment" placeholder="Комментарий">
+          <label class="booking-form__agree check">
+            <input type="checkbox" class="check-input" required>
+            <span class="check-check"></span>
+            <span class="check-label">Нажимая «забронировать стол», я подтверждаю согласие с <a href="#">политикой конфиденциальности</a></span>
+          </label>
+          <button type="submit" class="booking-form__submit">Забронировать стол</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="contacts__map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Aarcanum&amp;source=constructor&amp;scroll=true"
+          width="100%"
+          height="514"
+          frameborder="0"
+          allowfullscreen
+          title="Карта Arcanum"></iframe>
       </div>
     </section>
   </main>

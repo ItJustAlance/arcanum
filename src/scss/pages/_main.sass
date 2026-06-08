@@ -54,7 +54,7 @@
       letter-spacing: 1px
 
 // ─── About ──────────────────────────────────────────────────────────────────
-$aboutBg: #F9EFE2
+$aboutBg: #000
 
 .about
   padding: 74px 160px 48px
@@ -87,7 +87,7 @@ $aboutBg: #F9EFE2
     text-transform: uppercase
     max-width: 556px
     margin: 0
-    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
@@ -96,7 +96,7 @@ $aboutBg: #F9EFE2
     font-family: $baseFont
     font-size: 16px
     line-height: 26px
-    color: rgba(0,0,0,.6)
+    opacity: 0.6
     max-width: 621px
     margin: 0
 
@@ -113,7 +113,7 @@ $aboutBg: #F9EFE2
     font-weight: 600
     letter-spacing: 1px
     text-transform: uppercase
-    color: rgba(0,0,0,.7)
+    opacity: 0.8
     text-decoration: none
 
   .btn--about
@@ -148,9 +148,9 @@ $aboutBg: #F9EFE2
       content: ''
       position: absolute
       inset: 0
-      background: linear-gradient(-88deg, rgba(249,239,226,0) 64.6%, rgba(249,239,226,1) 98.7%), linear-gradient(85deg, rgba(249,239,226,0) 46.4%, rgba(249,239,226,1) 98.4%), linear-gradient(179deg, rgba(249,239,226,0) 58.5%, rgba(249,239,226,1) 99.3%), linear-gradient(0deg, rgba(249,239,226,0) 62.3%, rgba(249,239,226,1) 100%)
+      background: linear-gradient(271.4deg, rgba(0, 0, 0, 0) 64.6%, #000000 98.69%), linear-gradient(86.52deg, rgba(0, 0, 0, 0) 46.41%, #000000 98.43%), linear-gradient(179.26deg, rgba(0, 0, 0, 0) 58.46%, #000000 99.33%), linear-gradient(360deg, rgba(0, 0, 0, 0) 62.27%, #000000 100%)
 
-  +r($xxl)
+    +r($xxl)
     padding: 60px 40px
 
   +r($lg)
@@ -162,3 +162,707 @@ $aboutBg: #F9EFE2
     &__image
       width: 100%
       height: 300px
+
+// ─── Gastro ─────────────────────────────────────────────────────────────────
+.gastro
+  position: relative
+  height: 854px
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 0 160px
+
+  &__bg
+    position: absolute
+    inset: 0
+    img
+      width: 100%
+      height: 126%
+      object-fit: cover
+      object-position: center
+      margin-top: -13%
+
+  &__overlay
+    position: absolute
+    inset: 0
+    background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.82) 100%), linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.78) 89%, #000 96%), linear-gradient(to top, rgba(0,0,0,0) 18%, rgba(0,0,0,0.78) 70%, #000 90%)
+
+  &__top
+    position: relative
+    z-index: 1
+    padding-top: 60px
+    margin: 0 auto
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 22px
+
+  &__title
+    font-family: $fontDisplay
+    font-size: 40px
+    line-height: 59px
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 0
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-align: center
+
+  &__subtitle
+    font-family: $baseFont
+    font-size: 15px
+    font-weight: 600
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorText
+    opacity: 0.6
+    margin: 0
+    text-align: center
+
+  &__bottom
+    position: relative
+    z-index: 1
+    text-align: center
+    padding-bottom: 80px
+
+  &__label
+    font-family: $fontDisplay
+    font-size: 40px
+    line-height: 59px
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 0
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+
+  +r($xxl)
+    padding: 0 40px
+    &__top
+      margin-left: 0
+      width: 100%
+
+  +r($lg)
+    height: auto
+    min-height: 600px
+    padding: 60px 20px
+    &__bg img
+      height: 100%
+      margin-top: 0
+    &__top
+      margin-left: 0
+      width: 100%
+      padding-top: 0
+
+// ─── Menu Oval (block 9) ────────────────────────────────────────────────────
+.btn--oval
+  background: #913500
+  color: #F9EFE2
+  border: 1px solid rgba(255,255,255,0.3)
+  border-radius: 64px
+  padding: 15px 40px
+  font-size: 15px
+  font-family: $baseFont
+  font-weight: 500
+  cursor: pointer
+  text-decoration: none
+  display: inline-block
+  flex-shrink: 0
+  transition: opacity 0.3s ease
+  &:hover
+    opacity: 0.8
+
+.btn--primary
+  background: #913500
+  color: #F9EFE2
+  border: 1px solid rgba(255,255,255,0.3)
+  border-radius: 64px
+  padding: 15px 52px
+  font-size: 15px
+  font-family: $baseFont
+  font-weight: 500
+  cursor: pointer
+  text-decoration: none
+  display: inline-block
+  border: none
+  transition: opacity 0.3s ease
+  &:hover
+    opacity: 0.8
+
+// Desktop: 3 oval cards side by side with hover overlay
+.menu-oval
+  // background: $colorBg
+  padding: 12px 160px 112px
+
+  &__inner
+    display: flex
+    gap: 16px
+
+  &__card
+    position: relative
+    width: 523px
+    height: 720px
+    border-radius: 500px
+    border: 1px solid rgba(255,255,255,0.06)
+    overflow: hidden
+    flex-shrink: 0
+    cursor: pointer
+
+  &__img
+    position: absolute
+    inset: 0
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__hover
+    position: absolute
+    inset: 0
+    display: flex
+    flex-direction: column
+    gap: 34px
+    align-items: center
+    justify-content: center
+    padding: 0 40px
+    text-align: center
+    opacity: 0
+    background: rgba(0,0,0,0.62)
+    transition: opacity 0.4s ease
+
+  &__card:hover &__hover
+    opacity: 1
+
+  &__content
+    display: flex
+    flex-direction: column
+    gap: 22px
+
+  &__title
+    font-family: $baseFont
+    font-size: 28px
+    font-weight: 600
+    line-height: 1.2
+    text-transform: uppercase
+    letter-spacing: 0
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    margin: 0
+
+  &__text
+    font-family: $baseFont
+    font-size: 16px
+    line-height: 26px
+    color: $colorText
+    opacity: 0.8
+    margin: 0
+
+  // Tablet: cards stack vertically, image left + text right always visible
+  +r($xxl)
+    padding: 24px 196px 60px
+
+    &__inner
+      flex-direction: column
+      gap: 24px
+
+    &__card
+      width: 100%
+      height: auto
+      min-height: 220px
+      border-radius: 0
+      border: none
+      border-bottom: 1px solid rgba(255,255,255,0.08)
+      overflow: visible
+      display: flex
+      align-items: center
+      gap: 52px
+      padding: 28px 0
+      cursor: default
+
+      &:last-child
+        border-bottom: none
+
+    &__img
+      position: relative
+      inset: auto
+      width: 348px
+      height: 220px
+      flex-shrink: 0
+      border-radius: 16px
+      overflow: hidden
+      img
+        border-radius: 16px
+
+    &__hover
+      position: relative
+      inset: auto
+      opacity: 1
+      background: transparent
+      padding: 0
+      text-align: left
+      align-items: flex-start
+      gap: 20px
+      transition: none
+
+    &__card:hover &__hover
+      opacity: 1
+
+  +r($lg)
+    padding: 24px 20px 60px
+
+    &__inner
+      gap: 16px
+
+    &__card
+      gap: 28px
+
+    &__img
+      width: 260px
+      height: 180px
+
+  +r($sm)
+    &__card
+      flex-direction: column
+      align-items: flex-start
+
+    &__img
+      width: 100%
+      height: 240px
+
+// ─── Service ─────────────────────────────────────────────────────────────────
+.service
+  // background: $colorBg
+  padding: 80px 160px
+  background: linear-gradient(180deg, #010101 20.83%, #270E01 42.46%, #B94101 108.68%), linear-gradient(180deg, #0C0C0C 0%, #1A1A1A 100%)
+
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 80px
+
+  &__info
+    flex: 0 0 auto
+    width: 557px
+    display: flex
+    flex-direction: column
+    gap: 40px
+
+  &__title
+    font-family: $fontDisplay
+    font-size: 40px
+    line-height: 59px
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 0
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+
+  &__tabs
+    display: flex
+    flex-wrap: wrap
+    gap: 20px
+    border-bottom: 1px solid rgba(255,255,255,0.06)
+  &__tab
+    color: rgba(255,255,255,0.3)
+    margin-bottom: -1px
+    padding: 0 4px 8px
+    font-size: 14px
+    font-family: $baseFont
+    font-weight: 500
+    cursor: pointer
+    transition: all 0.3s ease
+    background: none
+    text-align: left
+    text-transform: uppercase
+    &.is-active,
+    &:hover
+      color: $colorText
+      border-color: rgba(255,255,255,1)
+
+  &__text
+    font-family: $baseFont
+    font-size: 16px
+    line-height: 26px
+    color: $colorText
+    opacity: 0.6
+    margin: 0
+
+  .btn--service
+    background: $colorText
+    color: #913500
+    border: none
+    border-radius: 50px
+    padding: 16px 40px
+    font-size: 15px
+    font-family: $baseFont
+    font-weight: 600
+    cursor: pointer
+    text-decoration: none
+    display: inline-block
+    align-self: flex-start
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.85
+
+  &__image
+    flex: 1
+    display: flex
+    justify-content: center
+    img
+      max-width: 100%
+      height: auto
+      max-height: 500px
+
+  +r($xxl)
+    padding: 60px 40px
+    &__info
+      width: 460px
+
+  +r($lg)
+    padding: 60px 20px
+    &__inner
+      flex-direction: column
+    &__info
+      width: 100%
+
+// ─── Events ──────────────────────────────────────────────────────────────────
+.events
+  // background: $colorBg
+  padding: 60px 160px
+  max-width: 100vw
+  .btn-event
+    display: inline-block
+  &__inner
+    display: flex
+    align-items: flex-start
+    gap: 60px
+
+  &__intro
+    flex: 0 0 557px
+    display: flex
+    flex-direction: column
+    gap: 24px
+
+  &__title
+    font-family: $fontDisplay
+    font-size: 34px
+    line-height: 48px
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 0
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+
+  &__text
+    font-family: $baseFont
+    font-size: 16px
+    line-height: 26px
+    color: $colorText
+    opacity: 0.6
+    margin: 0
+
+  &__date
+    font-family: $baseFont
+    font-size: 15px
+    font-weight: 600
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: rgba(255,255,255,0.8)
+    font-style: normal
+
+  &__cards
+    overflow: hidden
+    flex: 0 1 100%
+    position: relative
+    padding: 0 60px
+    
+    .events__arrow
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 10
+      width: 40px
+      height: 40px
+      background: rgba(255, 255, 255, 0.1)
+      border: 1px solid rgba(255, 255, 255, 0.2)
+      border-radius: 50%
+      cursor: pointer
+      backdrop-filter: blur(4px)
+      transition: background 0.3s ease
+    
+    .events__arrow:hover
+      background: rgba(255, 255, 255, 0.2)
+    
+    .events__arrow::before
+      content: ""
+      display: block
+      width: 10px
+      height: 10px
+      border-top: 2px solid #FFFFFF
+      border-right: 2px solid #FFFFFF
+      position: absolute
+      top: 50%
+      left: 50%
+    
+    .events__arrow--prev
+      left: 0px
+    
+    .events__arrow--prev::before
+      transform: translate(-30%, -50%) rotate(-135deg)
+    
+    .events__arrow--next
+      right: 0px
+    
+    .events__arrow--next::before
+      transform: translate(-70%, -50%) rotate(45deg)
+
+      
+    &-slider
+      overflow: hidden
+      min-width: 0
+      max-width: 100%
+      display: flex
+      .slick-list
+        display: flex
+      .slick-track
+        display: flex
+      .slick-slide
+        display: flex
+        & > div
+          display: flex
+          
+    &-slide
+      padding: 0 8px
+      display: flex !important
+  &__card
+    display: flex
+    flex-direction: column
+    background: #111
+    border-radius: 0
+    overflow: hidden
+
+  &__card-img
+    height: 201px
+    overflow: hidden
+    padding: 0 16px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__card-body
+    padding: 24px
+    display: flex
+    flex-direction: column
+    gap: 12px
+    flex: 1
+
+  &__card-title
+    font-family: $baseFont
+    font-size: 18px
+    font-weight: 600
+    line-height: 1.4
+    text-transform: uppercase
+    margin: 0
+    color: $colorText
+
+  &__card-text
+    font-family: $baseFont
+    font-size: 16px
+    line-height: 25px
+    color: $colorText
+    opacity: 0.6
+    margin: 0
+    flex: 1
+
+  &__more
+    font-family: $baseFont
+    font-size: 16px
+    line-height: 25px
+    color: $colorText
+    text-decoration: none
+    display: inline-flex
+    align-items: center
+    gap: 8px
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.7
+
+  +r($xxl)
+    padding: 60px 40px
+    &__intro
+      flex: 0 0 400px
+
+  +r($lg)
+    padding: 60px 20px
+    &__inner
+      flex-direction: column
+    &__intro
+      flex: none
+      width: 100%
+    &__cards
+      width: 100%
+
+  +r($sm)
+    &__cards
+      grid-template-columns: 1fr
+
+// ─── Booking ─────────────────────────────────────────────────────────────────
+.booking
+  background: $colorBg
+  padding: 80px 160px
+
+  &__inner
+    max-width: 802px
+    margin: 0 auto
+
+  &__title
+    font-family: $fontDisplay
+    font-size: 40px
+    line-height: 56px
+    letter-spacing: 1px
+    text-transform: uppercase
+    margin: 0 0 48px
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-align: center
+
+.booking-form
+  display: flex
+  flex-direction: column
+  gap: 16px
+
+  &__row
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 16px
+
+  &__input
+    background: rgba(255,255,255,0.06)
+    border: 1px solid rgba(255,255,255,0.06)
+    border-radius: 50px
+    padding: 16px 20px
+    font-family: $baseFont
+    font-size: 15px
+    color: $colorText
+    outline: none
+    width: 100%
+    transition: border-color 0.3s ease
+    &::placeholder
+      color: rgba(255,255,255,0.35)
+    &:focus
+      border-color: rgba(255,255,255,0.3)
+
+    &--full
+      grid-column: 1 / -1
+
+  &__counter-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__counter-label
+    font-family: $baseFont
+    font-size: 14px
+    color: rgba(255,255,255,0.35)
+
+  &__agree
+    display: flex
+    align-items: flex-start
+    gap: 12px
+    cursor: pointer
+    input[type="checkbox"]
+      width: 20px
+      height: 20px
+      flex-shrink: 0
+      margin-top: 2px
+      accent-color: $colorAccent
+    span
+      font-family: $baseFont
+      font-size: 13px
+      line-height: 20px
+      color: rgba(255,255,255,0.4)
+
+  &__submit
+    background: #913500
+    color: #F9EFE2
+    border: none
+    border-radius: 64px
+    padding: 16px 52px
+    font-size: 15px
+    font-family: $baseFont
+    font-weight: 500
+    cursor: pointer
+    align-self: center
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.85
+
+  +r($lg)
+    &__row
+      grid-template-columns: 1fr
+
+.persons-counter
+  display: flex
+  align-items: center
+  gap: 16px
+  button
+    width: 32px
+    height: 32px
+    background: rgba(255,255,255,0.1)
+    border: 1px solid rgba(255,255,255,0.2)
+    border-radius: 50%
+    color: $colorText
+    font-size: 18px
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    line-height: 1
+    transition: background 0.3s ease
+    &:hover
+      background: rgba(255,255,255,0.2)
+  .js-counter-value
+    font-family: $baseFont
+    font-size: 16px
+    color: $colorText
+    min-width: 24px
+    text-align: center
+
++r($xxl)
+  .booking
+    padding: 60px 40px
+
++r($lg)
+  .booking
+    padding: 60px 20px
+  .booking__title
+    font-size: 28px
+    line-height: 40px
+    margin-bottom: 32px
+
+// ─── Contacts / Map ──────────────────────────────────────────────────────────
+.contacts
+  &__map
+    iframe
+      display: block
+      width: 100%
+      height: 514px
+      border: none
+
+  +r($sm)
+    &__map iframe
+      height: 320px
