@@ -1,0 +1,133 @@
+<%
+var data = {
+  title: "Новость — Arcanum Lounge",
+  copyright: "Arcanum"
+};
+
+var headerHtml = _.template(require('../includes/header.html'))(data);
+var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);
+var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);
+
+var footerHtml = _.template(require('../includes/footer.html'))({
+  ...data,
+  mobileFooter,
+  mobileMenu
+});
+%><!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= data.title %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="over">
+  <%= headerHtml %>
+
+  <main class="news-page">
+    <section class="news-article">
+      <div class="news-article__inner all">
+
+        <div class="news-article__aside">
+          <img class="news-article__image" src="img/news.png" alt="Новость Arcanum">
+        </div>
+
+        <div class="news-article__head">
+          <nav class="breadcrumb" aria-label="Хлебные крошки">
+            <a href="/" class="breadcrumb__item">Главная страница</a>
+            <span class="breadcrumb__sep">/</span>
+            <a href="#" class="breadcrumb__item">Новости</a>
+            <span class="breadcrumb__sep">/</span>
+            <span class="breadcrumb__item breadcrumb__item--active">Название новости</span>
+          </nav>
+          <h1 class="news-article__title">Пример текста заголовка новости</h1>
+        </div>
+
+        <div class="news-article__body-text">
+          <div class="news-article__text">
+            <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</p>
+            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некоторых людей недоумение при попытках прочитать рыбу текст. В отличие от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времён.</p>
+          </div>
+          <p class="news-article__date">1 июня 2026 в 20:00</p>
+        </div>
+
+        <div class="news-other">
+          <h2 class="news-other__title">Другие новости</h2>
+          <div class="news-other__cards">
+
+            <article class="news-card">
+              <h3 class="news-card__title">Пример заголовка новости</h3>
+              <p class="news-card__desc">Короткое описание новости/мероприятия, содержащее в себе текст из одной, двух или большее количество строк.</p>
+              <a href="#" class="news-card__link">
+                <span>Подробнее</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                  <path d="M1 5H11M11 5L7 1M11 5L7 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </article>
+
+            <article class="news-card">
+              <h3 class="news-card__title">Пример заголовка новости</h3>
+              <p class="news-card__desc">Короткое описание новости/мероприятия, содержащее в себе текст из одной, двух или большее количество строк.</p>
+              <a href="#" class="news-card__link">
+                <span>Подробнее</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                  <path d="M1 5H11M11 5L7 1M11 5L7 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <%= footerHtml %>
+
+  <div id="modal-booking" class="just-modal">
+    <div class="just-modal__overlay"></div>
+    <div class="just-modal__wrapper">
+      <div class="just-modal__container just-modal__container--booking">
+        <div class="just-modal__body just-modal__body--booking">
+          <button type="button" class="just-modal__close js-just-modal__close" aria-label="Закрыть">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <h2 class="booking__title">Забронируйте пространство<br>в центре столицы</h2>
+          <form class="booking-form">
+            <div class="booking-form__row">
+              <input class="booking-form__input" name="modal_name" placeholder="Ваше имя" required>
+              <input class="booking-form__input" name="modal_phone" placeholder="Номер телефона" required>
+            </div>
+            <div class="booking-form__row">
+              <input class="booking-form__input" name="modal_datetime" placeholder="Дата и время" required>
+              <div class="booking-form__input booking-form__counter-wrap">
+                <span class="booking-form__counter-label">Количество персон</span>
+                <div class="persons-counter js-persons-counter">
+                  <button type="button" class="js-counter-minus">−</button>
+                  <span class="js-counter-value">1</span>
+                  <button type="button" class="js-counter-plus">+</button>
+                </div>
+              </div>
+            </div>
+            <input class="booking-form__input booking-form__input--full" name="modal_comment" placeholder="Комментарий">
+            <label class="booking-form__agree check">
+              <input type="checkbox" class="check-input" required>
+              <span class="check-check"></span>
+              <span class="check-label">Нажимая «забронировать стол», я подтверждаю согласие с <a href="#">политикой конфиденциальности</a></span>
+            </label>
+            <button type="submit" class="booking-form__submit">Забронировать стол</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

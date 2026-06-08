@@ -1,0 +1,202 @@
+// ─── News Article Page ─────────────────────────────────────────────────────
+.news-article
+  background: #111
+
+  &__inner
+    display: grid
+    grid-template-columns: minmax(0, 50%) 1fr
+    grid-template-areas: "aside head" "aside body" "aside other"
+    column-gap: 60px
+
+  &__aside
+    grid-area: aside
+    position: sticky
+    top: 104px
+    align-self: start
+    height: fit-content
+
+  &__image
+    width: 100%
+    height: calc(100vh - 104px)
+    max-height: 800px
+    object-fit: cover
+    display: block
+
+  &__head
+    grid-area: head
+    display: flex
+    flex-direction: column
+    gap: 24px
+    padding-top: 44px
+    padding-bottom: 24px
+
+  &__body-text
+    grid-area: body
+    display: flex
+    flex-direction: column
+    gap: 24px
+    padding-bottom: 56px
+    border-bottom: 1px solid rgba(255,255,255,0.2)
+
+  &__title
+    font-family: $fontDisplay
+    font-size: 34px
+    font-weight: 400
+    line-height: 48px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorText
+    margin: 0
+
+  &__text
+    font-family: $baseFont
+    font-size: 15px
+    font-weight: 400
+    line-height: 26px
+    color: $colorText
+    opacity: 0.8
+    margin: 0
+    p
+      margin: 0 0 15px
+      &:last-child
+        margin-bottom: 0
+
+  &__date
+    font-family: $baseFont
+    font-size: 13px
+    font-weight: 600
+    line-height: 24px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorText
+    opacity: 0.8
+    margin: 0
+
+  +r($xxl)
+    &__inner
+      grid-template-columns: 1fr
+      grid-template-areas: "head" "aside" "body" "other"
+      column-gap: 0
+      padding-top: 60px
+    &__aside
+      position: static
+      height: auto
+    &__image
+      height: 412px
+      max-height: none
+    &__head
+      padding-top: 24px
+
+  +r($sm)
+    &__inner
+      padding-top: 52px
+    &__image
+      height: 266px
+    &__head
+      padding-top: 16px
+    &__body-text
+      padding-bottom: 40px
+
+// ─── Breadcrumb ─────────────────────────────────────────────────────────────
+.breadcrumb
+  display: flex
+  align-items: center
+  gap: 8px
+  flex-wrap: wrap
+
+  &__item
+    font-family: $baseFont
+    font-size: 14px
+    font-weight: 400
+    line-height: 25px
+    color: $colorText
+    opacity: 0.25
+    text-decoration: none
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.5
+    &--active
+      opacity: 1
+      cursor: default
+      &:hover
+        opacity: 1
+
+  &__sep
+    font-family: $baseFont
+    font-size: 14px
+    color: $colorText
+    opacity: 0.25
+
+// ─── Other News ──────────────────────────────────────────────────────────────
+.news-other
+  grid-area: other
+  display: flex
+  flex-direction: column
+  gap: 28px
+  padding-top: 40px
+  padding-bottom: 96px
+
+  &__title
+    font-family: $baseFont
+    font-size: 22px
+    font-weight: 600
+    line-height: 29px
+    text-transform: uppercase
+    color: $colorText
+    margin: 0
+
+  &__cards
+    display: flex
+    gap: 16px
+
+  +r($sm)
+    padding-bottom: 60px
+    &__cards
+      flex-direction: column
+
+// ─── News Card ───────────────────────────────────────────────────────────────
+.news-card
+  flex: 1
+  background: #1a1a1a
+  border: 1px solid rgba(255,255,255,0.06)
+  border-radius: 2px
+  padding: 28px 28px 20px 22px
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+  &__title
+    font-family: $baseFont
+    font-size: 18px
+    font-weight: 600
+    line-height: 29px
+    text-transform: uppercase
+    color: $colorText
+    margin: 0
+
+  &__desc
+    font-family: $baseFont
+    font-size: 16px
+    font-weight: 400
+    line-height: 25px
+    color: $colorText
+    opacity: 0.6
+    margin: 0
+    flex: 1
+
+  &__link
+    display: flex
+    align-items: center
+    gap: 10px
+    padding: 8px 0
+    color: $colorText
+    text-decoration: none
+    font-family: $baseFont
+    font-size: 16px
+    font-weight: 400
+    line-height: 25px
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.7
+    svg
+      flex-shrink: 0
