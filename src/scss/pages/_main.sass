@@ -87,7 +87,7 @@ $aboutBg: #000
     text-transform: uppercase
     max-width: 556px
     margin: 0
-    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
@@ -192,8 +192,8 @@ $aboutBg: #000
     position: relative
     z-index: 1
     padding-top: 60px
-    margin-left: 550px
-    width: 817px
+    margin: 0 auto
+    width: 100%
     display: flex
     flex-direction: column
     gap: 22px
@@ -205,10 +205,11 @@ $aboutBg: #000
     letter-spacing: 1px
     text-transform: uppercase
     margin: 0
-    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
+    text-align: center
 
   &__subtitle
     font-family: $baseFont
@@ -219,6 +220,7 @@ $aboutBg: #000
     color: $colorText
     opacity: 0.6
     margin: 0
+    text-align: center
 
   &__bottom
     position: relative
@@ -233,7 +235,7 @@ $aboutBg: #000
     letter-spacing: 1px
     text-transform: uppercase
     margin: 0
-    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
@@ -293,7 +295,7 @@ $aboutBg: #000
 
 // Desktop: 3 oval cards side by side with hover overlay
 .menu-oval
-  background: $colorBg
+  // background: $colorBg
   padding: 12px 160px 112px
 
   &__inner
@@ -305,7 +307,7 @@ $aboutBg: #000
     width: 523px
     height: 720px
     border-radius: 500px
-    border: 1px solid rgba(255,255,255,0.12)
+    border: 1px solid rgba(255,255,255,0.06)
     overflow: hidden
     flex-shrink: 0
     cursor: pointer
@@ -347,7 +349,7 @@ $aboutBg: #000
     line-height: 1.2
     text-transform: uppercase
     letter-spacing: 0
-    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
@@ -435,8 +437,9 @@ $aboutBg: #000
 
 // ─── Service ─────────────────────────────────────────────────────────────────
 .service
-  background: $colorBg
+  // background: $colorBg
   padding: 80px 160px
+  background: linear-gradient(180deg, #010101 20.83%, #270E01 42.46%, #B94101 108.68%), linear-gradient(180deg, #0C0C0C 0%, #1A1A1A 100%)
 
   &__inner
     display: flex
@@ -458,7 +461,7 @@ $aboutBg: #000
     letter-spacing: 1px
     text-transform: uppercase
     margin: 0
-    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
@@ -466,24 +469,24 @@ $aboutBg: #000
   &__tabs
     display: flex
     flex-wrap: wrap
-    gap: 8px
-
+    gap: 20px
+    border-bottom: 1px solid rgba(255,255,255,0.06)
   &__tab
-    background: rgba(255,255,255,0.07)
-    color: rgba(255,255,255,0.5)
-    border: 1px solid rgba(255,255,255,0.12)
-    border-radius: 30px
-    padding: 10px 24px
+    color: rgba(255,255,255,0.3)
+    margin-bottom: -1px
+    padding: 0 4px 8px
     font-size: 14px
     font-family: $baseFont
     font-weight: 500
     cursor: pointer
     transition: all 0.3s ease
+    background: none
+    text-align: left
+    text-transform: uppercase
     &.is-active,
     &:hover
-      background: rgba(255,255,255,0.15)
       color: $colorText
-      border-color: rgba(255,255,255,0.3)
+      border-color: rgba(255,255,255,1)
 
   &__text
     font-family: $baseFont
@@ -495,7 +498,7 @@ $aboutBg: #000
 
   .btn--service
     background: $colorText
-    color: $colorBg
+    color: #913500
     border: none
     border-radius: 50px
     padding: 16px 40px
@@ -533,9 +536,11 @@ $aboutBg: #000
 
 // ─── Events ──────────────────────────────────────────────────────────────────
 .events
-  background: $colorBg
+  // background: $colorBg
   padding: 60px 160px
-
+  max-width: 100vw
+  .btn-event
+    display: inline-block
   &__inner
     display: flex
     align-items: flex-start
@@ -554,7 +559,7 @@ $aboutBg: #000
     letter-spacing: 1px
     text-transform: uppercase
     margin: 0
-    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
@@ -577,11 +582,69 @@ $aboutBg: #000
     font-style: normal
 
   &__cards
-    flex: 1
-    display: grid
-    grid-template-columns: 1fr 1fr
-    gap: 20px
+    overflow: hidden
+    flex: 0 1 100%
+    position: relative
+    padding: 0 60px
+    
+    .events__arrow
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 10
+      width: 40px
+      height: 40px
+      background: rgba(255, 255, 255, 0.1)
+      border: 1px solid rgba(255, 255, 255, 0.2)
+      border-radius: 50%
+      cursor: pointer
+      backdrop-filter: blur(4px)
+      transition: background 0.3s ease
+    
+    .events__arrow:hover
+      background: rgba(255, 255, 255, 0.2)
+    
+    .events__arrow::before
+      content: ""
+      display: block
+      width: 10px
+      height: 10px
+      border-top: 2px solid #FFFFFF
+      border-right: 2px solid #FFFFFF
+      position: absolute
+      top: 50%
+      left: 50%
+    
+    .events__arrow--prev
+      left: 0px
+    
+    .events__arrow--prev::before
+      transform: translate(-30%, -50%) rotate(-135deg)
+    
+    .events__arrow--next
+      right: 0px
+    
+    .events__arrow--next::before
+      transform: translate(-70%, -50%) rotate(45deg)
 
+      
+    &-slider
+      overflow: hidden
+      min-width: 0
+      max-width: 100%
+      display: flex
+      .slick-list
+        display: flex
+      .slick-track
+        display: flex
+      .slick-slide
+        display: flex
+        & > div
+          display: flex
+          
+    &-slide
+      padding: 0 8px
+      display: flex !important
   &__card
     display: flex
     flex-direction: column
@@ -592,6 +655,7 @@ $aboutBg: #000
   &__card-img
     height: 201px
     overflow: hidden
+    padding: 0 16px
     img
       width: 100%
       height: 100%
@@ -670,10 +734,11 @@ $aboutBg: #000
     letter-spacing: 1px
     text-transform: uppercase
     margin: 0 0 48px
-    background: linear-gradient(180deg, #fff 63.9%, #B4A379 161%)
+    background: linear-gradient(181.85deg, #FFFFFF -63.89%, #B4A379 161.07%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
+    text-align: center
 
 .booking-form
   display: flex
@@ -687,8 +752,8 @@ $aboutBg: #000
 
   &__input
     background: rgba(255,255,255,0.06)
-    border: 1px solid rgba(255,255,255,0.12)
-    border-radius: 12px
+    border: 1px solid rgba(255,255,255,0.06)
+    border-radius: 50px
     padding: 16px 20px
     font-family: $baseFont
     font-size: 15px

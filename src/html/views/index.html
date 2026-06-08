@@ -48,10 +48,13 @@ var footerHtml = _.template(require('../includes/footer.html'))({
               <a class="about__phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
             </address>
           </div>
-          <button class="btn btn--about js-btn-modal" data-modal="modal-booking">Подробнее о нас</button>
+          <div class="b-btn">
+            <button class="btn btn--about js-btn-modal" data-modal="modal-booking">Подробнее о нас</button>
+          </div>
+          
         </div>
         <div class="about__image">
-          <img src="img/about.jpg" alt="Интерьер Arcanum">
+          <img src="img/about.png" alt="Интерьер Arcanum">
         </div>
       </div>
     </section>
@@ -164,29 +167,64 @@ var footerHtml = _.template(require('../includes/footer.html'))({
           <h2 class="events__title">Скоро открытие лаунж&#8209;пространства</h2>
           <p class="events__text">Авторские коктейли и атмосфера премиального комфорта ждут вас в центре Москвы</p>
           <time class="events__date">1 июня 2026</time>
-          <button class="btn--primary js-btn-modal" data-modal="modal-booking">Забронировать</button>
+          <div class="btn-box">
+            <button class="btn-event btn--primary js-btn-modal" data-modal="modal-booking">Забронировать</button>
+          </div>
         </div>
         <div class="events__cards">
-          <article class="events__card">
-            <div class="events__card-img">
-              <img src="img/events-1.png" alt="">
+          <div class="events__cards-slider js-events-slider">
+            <div class="events__cards-slide">
+              <article class="events__card">
+                <div class="events__card-img">
+                  <img src="img/events-1.png" alt="">
+                </div>
+                <div class="events__card-body">
+                  <h4 class="events__card-title">Скоро открытие</h4>
+                  <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                  <a href="#" class="events__more">Подробнее →</a>
+                </div>
+              </article>
             </div>
-            <div class="events__card-body">
-              <h4 class="events__card-title">Скоро открытие</h4>
-              <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
-              <a href="#" class="events__more">Подробнее →</a>
+            <div class="events__cards-slide">
+              <article class="events__card">
+                <div class="events__card-img">
+                  <img src="img/events-2.png" alt="">
+                </div>
+                <div class="events__card-body">
+                  <h4 class="events__card-title">Специальное событие</h4>
+                  <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
+                  <a href="#" class="events__more">Подробнее →</a>
+                </div>
+              </article>
             </div>
-          </article>
-          <article class="events__card">
-            <div class="events__card-img">
-              <img src="img/events-2.png" alt="">
+            <div class="events__cards-slide">
+              <article class="events__card">
+                <div class="events__card-img">
+                  <img src="img/events-2.png" alt="">
+                </div>
+                <div class="events__card-body">
+                  <h4 class="events__card-title">Специальное событие</h4>
+                  <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
+                  <a href="#" class="events__more">Подробнее →</a>
+                </div>
+              </article>
             </div>
-            <div class="events__card-body">
-              <h4 class="events__card-title">Специальное событие</h4>
-              <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
-              <a href="#" class="events__more">Подробнее →</a>
+            <div class="events__cards-slide">
+              <article class="events__card">
+                <div class="events__card-img">
+                  <img src="img/events-2.png" alt="">
+                </div>
+                <div class="events__card-body">
+                  <h4 class="events__card-title">Специальное событие</h4>
+                  <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
+                  <a href="#" class="events__more">Подробнее →</a>
+                </div>
+              </article>
             </div>
-          </article>
+            
+          </div>
+          <button class="events__arrow events__arrow--prev js-events-prev" aria-label="Назад"></button>
+          <button class="events__arrow events__arrow--next js-events-next" aria-label="Вперёд"></button>
         </div>
       </div>
     </section>
@@ -228,9 +266,10 @@ var footerHtml = _.template(require('../includes/footer.html'))({
             </div>
           </div>
           <input class="booking-form__input booking-form__input--full" name="comment" placeholder="Комментарий">
-          <label class="booking-form__agree">
-            <input type="checkbox" required>
-            <span>Нажимая «забронировать стол», я подтверждаю согласие с политикой конфиденциальности</span>
+          <label class="booking-form__agree check">
+            <input type="checkbox" class="check-input" required>
+            <span class="check-check"></span>
+            <span class="check-label">Нажимая «забронировать стол», я подтверждаю согласие с <a href="#">политикой конфиденциальности</a></span>
           </label>
           <button type="submit" class="booking-form__submit">Забронировать стол</button>
         </form>

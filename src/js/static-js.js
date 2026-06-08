@@ -5,14 +5,23 @@ $(function() {
   $(window).on('scroll', function() {
     $('.js-header').toggleClass('is-scrolled', $(this).scrollTop() > 50);
   });
-
-  // Interior slider
-  $('.js-interior-slider').slick({
-    variableWidth: true,
-    slidesToScroll: 1,
-    infinite: true,
-    arrows: false,
-  });
+	
+	// Interior slider
+	$('.js-interior-slider').slick({
+		variableWidth: true,
+		slidesToScroll: 1,
+		infinite: true,
+		arrows: false,
+	});
+	
+	// Events slider
+	$('.js-events-slider').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		infinite: true,
+		prevArrow: $('.js-events-prev'),
+		nextArrow: $('.js-events-next')
+	});
 
   // VIP slider
   $('.js-vip-slider').slick({
