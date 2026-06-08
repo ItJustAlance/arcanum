@@ -3,7 +3,7 @@
   //background: $colorBg
   padding: 60px 0 132px
   overflow: hidden
-
+  max-width: 100vw
   &__img
     border-radius: 16px
     overflow: hidden
@@ -112,10 +112,15 @@
       left: 50%
     &--prev
       left: 40px
+      +r($lg)
+        left: calc(50% - 400px)
       &::before
         transform: translate(-30%, -50%) rotate(-135deg)
     &--next
       right: 40px
+      +r($lg)
+        left: auto
+        right: calc(50% - 400px)
       &::before
         transform: translate(-70%, -50%) rotate(45deg)
 

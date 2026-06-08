@@ -1,13 +1,15 @@
 // ─── Footer ──────────────────────────────────────────────────────────────────
 .footer
   background: #0a0a0a
-  padding: 56px 160px 40px
+  padding: 56px 20px 40px
 
   &__inner
     display: flex
     flex-direction: column
     gap: 28px
-
+    max-width: 1600px
+    width: 100%
+    margin: 0 auto
   &__top
     display: flex
     align-items: flex-start
@@ -24,8 +26,13 @@
   &__nav
     display: flex
     gap: 92px
-    padding: 6px 150px 6px 150px
+    padding: 6px 0 6px 0
     flex: 1
+    margin: 0 auto
+    justify-content: center
+    +r($lg)
+      margin: 0
+      order: 0
 
   &__nav-col
     list-style: none
@@ -159,6 +166,7 @@
       flex-wrap: wrap
       padding: 0
       gap: 24px
+      order: 0
     &__contacts
       width: 100%
     &__docs
