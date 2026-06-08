@@ -1,32 +1,48 @@
 <div class="mobile-menu js-mobile-menu">
-  <div class="mobile-menu__overlay js-mobile-menu-close"></div>
   <div class="mobile-menu__inner">
-    <div class="mobile-menu__header">
+
+    <div class="mobile-menu__topbar">
+      <button class="mobile-menu__bron-pill js-btn-modal js-mobile-menu-close" data-modal="modal-booking">Бронь</button>
       <a class="mobile-menu__logo" href="/">
-        <img src="img/logo.png" alt="Arcanum" height="34">
+        <img src="img/logo-menu.svg" alt="Arcanum" height="23">
       </a>
       <button class="mobile-menu__close js-mobile-menu-close" aria-label="Закрыть">
-        <span></span><span></span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
       </button>
     </div>
 
-    <div class="mobile-menu__info">
-      <a href="https://yandex.ru/maps/" class="mobile-menu__info-item" target="_blank">г.Москва ул.Новоостаповская д.20</a>
-      <a href="tel:+70000000000" class="mobile-menu__info-item">+7 (000) 000-00-00</a>
+    <div class="mobile-menu__content">
+
+      <div class="mobile-menu__info">
+        <p class="mobile-menu__tagline">Лаунж-пространство<br>в сердце Москвы</p>
+        <div class="mobile-menu__contacts">
+          <a href="https://yandex.ru/maps/" class="mobile-menu__contact" target="_blank">
+            <img src="img/foot-nav.png" alt="" width="18" height="18">
+            <span>г.Москва ул.Новоостаповская д.20</span>
+          </a>
+          <a href="tel:+70000000000" class="mobile-menu__contact">
+            <img src="img/foot-tel.png" alt="" width="16" height="16">
+            <span>+7 (000) 000-00-00</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <a href="#about" class="mobile-menu__nav-item js-mobile-menu-close">О нас</a>
+        <a href="#interior" class="mobile-menu__nav-item js-mobile-menu-close">Интерьер</a>
+        <a href="#menu" class="mobile-menu__nav-item js-mobile-menu-close">Меню</a>
+        <a href="#events" class="mobile-menu__nav-item js-mobile-menu-close">Афиша</a>
+        <a href="#service" class="mobile-menu__nav-item js-mobile-menu-close">Сервис</a>
+        <a href="#contacts" class="mobile-menu__nav-item js-mobile-menu-close">Контакты</a>
+      </nav>
+
+      <button class="mobile-menu__book-btn js-btn-modal js-mobile-menu-close" data-modal="modal-booking" type="button">
+        <img src="img/ico-bron.svg" alt="" width="17" height="17">
+        <span>Бронь</span>
+      </button>
+
     </div>
-
-    <nav class="mobile-menu__nav">
-      <ul>
-        <li><a href="#interior" class="js-mobile-menu-close">Интерьер</a></li>
-        <li><a href="#menu" class="js-mobile-menu-close">Меню</a></li>
-        <li><a href="#events" class="js-mobile-menu-close">Афиша</a></li>
-        <li><a href="#service" class="js-mobile-menu-close">Сервис</a></li>
-        <li><a href="#contacts" class="js-mobile-menu-close">Контакты</a></li>
-      </ul>
-    </nav>
-
-    <a class="mobile-menu__book js-btn-modal js-mobile-menu-close" data-modal="modal-booking" href="#">
-      Бронь →
-    </a>
   </div>
 </div>

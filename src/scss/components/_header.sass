@@ -121,113 +121,173 @@
   z-index: 200
   pointer-events: none
   opacity: 0
-  transition: opacity 0.3s ease
+  transition: opacity 0.35s ease
 
   &.is-open
     pointer-events: all
     opacity: 1
 
-  &__overlay
-    position: absolute
-    inset: 0
-    background: rgba(0,0,0,0.6)
-    backdrop-filter: blur(4px)
-
   &__inner
     position: absolute
-    top: 0
-    left: 0
-    bottom: 0
-    width: 320px
-    background: #111
+    inset: 0
+    background: #000
     display: flex
     flex-direction: column
-    padding: 0 0 40px
-    transform: translateX(-100%)
+    transform: translateX(100%)
     transition: transform 0.35s ease
 
   .is-open &__inner
     transform: translateX(0)
 
-  &__header
+  // ── Top bar ────────────────────────────────────────────────────────────────
+  &__topbar
+    position: relative
+    height: 52px
     display: flex
     align-items: center
     justify-content: space-between
-    padding: 20px 24px
-    border-bottom: 1px solid rgba(255,255,255,0.08)
+    padding: 0 20px
+    flex-shrink: 0
 
-  &__logo img
-    height: 34px
-    width: auto
-
-  &__close
-    width: 32px
-    height: 32px
-    background: none
+  &__bron-pill
+    background: rgba(255,255,255,0.12)
     border: none
-    cursor: pointer
-    position: relative
-    span
-      display: block
-      position: absolute
-      top: 50%
-      left: 50%
-      width: 18px
-      height: 2px
-      background: $colorText
-      border-radius: 2px
-      &:first-child
-        transform: translate(-50%, -50%) rotate(45deg)
-      &:last-child
-        transform: translate(-50%, -50%) rotate(-45deg)
-
-  &__info
-    padding: 24px 24px 0
-    display: flex
-    flex-direction: column
-    gap: 10px
-
-  &__info-item
+    border-radius: 50px
+    padding: 5px 14px
     font-family: $baseFont
-    font-size: 13px
-    color: rgba(255,255,255,0.4)
-    text-decoration: none
-    letter-spacing: 0.5px
-
-  &__nav
-    flex: 1
-    padding: 32px 24px
-    ul
-      list-style: none
-      margin: 0
-      padding: 0
-      display: flex
-      flex-direction: column
-      gap: 4px
-    a
-      display: block
-      padding: 12px 0
-      font-family: $baseFont
-      font-size: 18px
-      font-weight: 600
-      letter-spacing: 1px
-      text-transform: uppercase
-      color: $colorText
-      text-decoration: none
-      border-bottom: 1px solid rgba(255,255,255,0.06)
-      transition: color 0.3s ease
-      &:hover
-        color: $colorAccent
-
-  &__book
-    margin: 0 24px
-    font-family: $baseFont
-    font-size: 16px
+    font-size: 11px
     font-weight: 600
     letter-spacing: 1px
     text-transform: uppercase
-    color: $colorAccent
+    color: $colorText
+    cursor: pointer
+    transition: background 0.3s ease
+    &:hover
+      background: rgba(255,255,255,0.2)
+
+  &__logo
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    img
+      height: 23px
+      width: auto
+      display: block
+
+  &__close
+    width: 28px
+    height: 28px
+    background: none
+    border: none
+    cursor: pointer
+    color: $colorText
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    svg
+      width: 24px
+      height: 24px
+
+  // ── Content ───────────────────────────────────────────────────────────────
+  &__content
+    flex: 1
+    display: flex
+    flex-direction: column
+    gap: 24px
+    padding: 20px 20px 24px
+    overflow-y: auto
+
+  &__info
+    display: flex
+    flex-direction: column
+    gap: 14px
+    align-items: center
+
+  &__tagline
+    font-family: $baseFont
+    font-size: 14px
+    font-weight: 700
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    color: #FFAF64
+    margin: 0
+    text-align: center
+    line-height: 1.45
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    gap: 4px
+    align-items: center
+
+  &__contact
+    display: flex
+    align-items: center
+    gap: 8px
+    text-decoration: none
+    font-family: $baseFont
+    font-size: 10px
+    font-weight: 600
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorText
+    span
+      opacity: 0.8
+    img
+      opacity: 0.7
+      flex-shrink: 0
+
+  // ── Nav list ──────────────────────────────────────────────────────────────
+  &__nav
+    display: flex
+    flex-direction: column
+
+  &__nav-item
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: 16px 0
+    border-top: 1px solid rgba(255,255,255,0.1)
+    font-family: $baseFont
+    font-size: 12px
+    font-weight: 700
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    color: $colorText
     text-decoration: none
     transition: opacity 0.3s ease
+    &:last-child
+      border-bottom: 1px solid rgba(255,255,255,0.1)
+    &:active,
     &:hover
-      opacity: 0.7
+      opacity: 0.6
+
+  // ── Book button ───────────────────────────────────────────────────────────
+  &__book-btn
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 9px
+    width: 100%
+    padding: 14px 22px
+    background: $colorText
+    border: none
+    border-radius: 50px
+    box-shadow: 0 4px 10px rgba(0,0,0,0.36)
+    cursor: pointer
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.9
+    span
+      font-family: $baseFont
+      font-size: 12px
+      font-weight: 600
+      letter-spacing: 1px
+      text-transform: uppercase
+      background: linear-gradient(to bottom, #AA3E00, #6B2700)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+    img
+      flex-shrink: 0
