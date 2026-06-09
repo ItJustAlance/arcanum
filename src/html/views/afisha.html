@@ -1,0 +1,261 @@
+<%
+var data = {
+  title: "Новость — Arcanum Lounge",
+  copyright: "Arcanum",
+  logo: "img/logo-inner.png"
+};
+
+var headerHtml = _.template(require('../includes/header.html'))(data);
+var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);
+var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);
+
+var footerHtml = _.template(require('../includes/footer.html'))({
+  ...data,
+  mobileFooter,
+  mobileMenu
+});
+%><!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= data.title %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="inner-page over">
+  <%= headerHtml %>
+
+  <main class="inner-page-container">
+    <div class="page-header-ilustration">
+      <div class="page-header-ilustration__content">
+        <div class="page-header-ilustration__date">12.06.2026</div>
+        <div class="page-header-ilustration__title">Название мероприятия</div>
+        <div class="page-header-ilustration__text">Пример короткого описание новости/мероприятия, содержащий в себе текст из одной, двух или большего количества строк.</div>
+      </div><!--end page-header-ilustration__content-->
+      <div class="page-header-ilustration__image">
+        <img class="page-header-ilustration__image-img" src="img/afisha.jpg" alt="">
+      </div>
+      <div class="page-header-ilustration__overlay"></div>
+    </div><!--end page-header-ilustration -->
+    <div class="page-content">
+      <div class="all">
+        <div class="page-title-box">
+          <h1 class="h1-title">Новости</h1>
+        </div>
+        <div class="list-news">
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          <div class="news-item-wrapper">
+            <article class="events__card">
+              <div class="events__card-img">
+                <img src="img/events-1.png" alt="">
+              </div>
+              <div class="events__card-body">
+                <h4 class="events__card-title">Скоро открытие</h4>
+                <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                <a href="#" class="events__more" tabindex="0">Подробнее →</a>
+              </div>
+            </article>
+          </div><!--end events__card-wrapper-->
+          
+        </div><!-- end list-news -->
+        <div class="pagination-box">
+          <ul class="pagination-list">
+            <li class="pagination-item">
+              <a href="#" class="pagination-link --active">1</a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">2</a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">3</a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">4</a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link"><img src="img/arr-r.svg" alt=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- end page-content -->
+    
+  </main>
+  <%= footerHtml %>
+
+  <div id="modal-booking" class="just-modal">
+    <div class="just-modal__overlay"></div>
+    <div class="just-modal__wrapper">
+      <div class="just-modal__container just-modal__container--booking">
+        <div class="just-modal__body just-modal__body--booking">
+          <button type="button" class="just-modal__close js-just-modal__close" aria-label="Закрыть">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <h2 class="booking__title">Забронируйте пространство<br>в центре столицы</h2>
+          <form class="booking-form">
+            <div class="booking-form__row">
+              <input class="booking-form__input" name="modal_name" placeholder="Ваше имя" required>
+              <input class="booking-form__input" name="modal_phone" placeholder="Номер телефона" required>
+            </div>
+            <div class="booking-form__row">
+              <input class="booking-form__input" name="modal_datetime" placeholder="Дата и время" required>
+              <div class="booking-form__input booking-form__counter-wrap">
+                <span class="booking-form__counter-label">Количество персон</span>
+                <div class="persons-counter js-persons-counter">
+                  <button type="button" class="js-counter-minus">−</button>
+                  <span class="js-counter-value">1</span>
+                  <button type="button" class="js-counter-plus">+</button>
+                </div>
+              </div>
+            </div>
+            <input class="booking-form__input booking-form__input--full" name="modal_comment" placeholder="Комментарий">
+            <label class="booking-form__agree check">
+              <input type="checkbox" class="check-input" required>
+              <span class="check-check"></span>
+              <span class="check-label">Нажимая «забронировать стол», я подтверждаю согласие с <a href="#">политикой конфиденциальности</a></span>
+            </label>
+            <button type="submit" class="booking-form__submit">Забронировать стол</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

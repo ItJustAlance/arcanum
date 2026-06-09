@@ -1,0 +1,84 @@
+.article-text
+  padding: 50px 0
+  background: #111111
+  &__title
+    font-size: 34px
+    font-family: $fontDisplay
+    padding: 0 0 32px
+    margin: 0
+    border-bottom: 1px solid rgba(255,255,255, 0.2)
+    +r($sm)
+      font-size: 20px
+  &__body
+    padding: 44px 0 0
+    display: flex
+    flex-direction: column
+    gap: 20px
+    color: rgba(255,255,255, 0.8)
+    h2
+      font-size: 22px
+      font-weight: 600
+      margin: 0
+      padding: 0
+      color: #fff
+      +r($sm)
+        font-size: 18px
+    hr
+      border: none
+      background: rgba(255,255,255, 0.2)
+      height: 1px
+      margin: 20px 0
+    p
+      margin: 0
+      padding: 0
+
+    ul, ol
+      margin: 0
+      color: #fff
+      padding: 0
+      display: flex
+      flex-direction: column
+      gap: 12px
+      li
+        display: block
+        position: relative
+        padding-left: 12px
+        &:before
+          background: #FFFFFF
+          width: 4px
+          height: 4px
+          border-radius: 50%
+          position: absolute
+          top: 10px
+          left: 0
+          content: ""
+
+    ol
+      margin: 0 0 0 15px
+      li
+        display: list-item
+        list-style: decimal
+        &:before
+          display: none
+
+  &__footer
+    margin-top: 40px
+    padding-top: 40px
+    border-top: 1px solid rgba(255,255,255, 0.2)
+    .article-btn-bron
+      margin-left: auto
+.article-btn-bron
+  background: #FFFFFF
+  font-size: 12px
+  font-weight: 600
+  text-transform: uppercase
+  color: #6B2700
+  border-radius: 50px
+  padding: 12px 20px
+  box-shadow: 0px 4px 20px 0px #0000005C
+  gap: 9px
+  align-items: center
+  cursor: pointer
+  display: flex
+  &:hover
+    background: rgba(255,255,255, 0.8)

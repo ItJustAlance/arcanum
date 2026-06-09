@@ -45,7 +45,11 @@ a
 
 .inner-page
   padding-top: 76px
-  
+  +r($xxl)
+    padding-top: 60px
+  &-container
+    &.bg111
+      background: #111
 input, textarea
   &::-webkit-input-placeholder
     opacity: 1 !important
@@ -139,3 +143,90 @@ body
   padding: 0 20px
   margin: 0 auto
 
+.page-title-box
+  padding-bottom: 32px
+  
+.page-content
+  padding-top: 60px
+  padding-bottom: 80px
+  
+.page-header-ilustration
+  min-height: 890px
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  text-align: center
+  padding-bottom: 80px
+  position: relative
+  +r($xxl)
+    min-height: 500px
+    height: calc(100vh - 90px)
+  &__overlay
+    position: absolute
+    inset: 0
+    background: linear-gradient(357.36deg, #000000 18.81%, rgba(0, 0, 0, 0) 93.09%)
+  
+  &__content
+    display: flex
+    flex-direction: column
+    gap: 28px
+    width: 100%
+    max-width: 800px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+  &__title
+    font-family: $fontDisplay
+    color: #fff
+    text-transform: uppercase
+    font-size: 52px
+    +r($xxl)
+      font-size: 32px
+    +r($sm)
+      font-size: 20px
+  &__date
+    color: rgba(255,255,255, .7)
+    font-size: 18px
+    font-weight: 600
+  &__text
+    font-size: 16px
+    font-weight: 600
+    color: rgba(255,255,255, .6)
+    
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &-img
+      position: absolute
+      inset: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center bottom
+
+      
+.pagination
+  &-box
+    padding: 28px 0
+  &-list
+    display: flex
+    flex-direction: row
+    gap: 8px
+    justify-content: center
+  &-item
+    display: flex
+  &-link
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 40px
+    height: 40px
+    color: #fff
+    font-weight: 500
+    font-size: 15px
+    border-radius: 50%
+    &.--active
+      background: #913500
