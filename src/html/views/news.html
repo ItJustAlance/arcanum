@@ -1,7 +1,8 @@
 <%
 var data = {
   title: "Новость — Arcanum Lounge",
-  copyright: "Arcanum"
+  copyright: "Arcanum",
+  logo: "img/logo-inner.png"
 };
 
 var headerHtml = _.template(require('../includes/header.html'))(data);
@@ -25,7 +26,7 @@ var footerHtml = _.template(require('../includes/footer.html'))({
 </head>
 <body>
 
-<div class="over">
+<div class="inner-page over">
   <%= headerHtml %>
 
   <main class="news-page">

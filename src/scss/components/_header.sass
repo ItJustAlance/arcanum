@@ -13,15 +13,14 @@
   &__inner
     display: flex
     align-items: center
-    height: 104px
-    padding: 0 20px
+    padding: 20px
     position: relative
     margin: 0 auto
     max-width: 1640px
     +r($xxl)
       height: 60px
       padding: 0 40px
-    +r($xss)
+    +r($sm)
       height: 52px
       padding: 0 20px
 
@@ -38,6 +37,9 @@
       +r($xxl)
         width: 160px
         height: 34px
+      +r($sm)
+        width: 110px
+        height: auto
 
   &__nav-left,
   &__nav-right
@@ -114,6 +116,10 @@
       border-radius: 2px
       transition: all 0.3s ease
 
+.inner-page
+  .header
+    background: #000
+    
 // ─── Mobile Menu ─────────────────────────────────────────────────────────────
 .mobile-menu
   position: fixed
