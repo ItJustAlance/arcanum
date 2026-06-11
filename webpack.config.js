@@ -6,17 +6,20 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
-function generateHtmlPlugins(templateDir) {
+function generateHtmlPlugins(templateDir, mode) {
 	const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+	
 	return templateFiles.map((item) => {
 		const parsedPath = path.parse(item);
 		const name = parsedPath.name;
 		const extension = parsedPath.ext.substring(1);
+		
 		return new HtmlWebpackPlugin({
 			filename: `${name}.html`,
 			template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
 			inject: true,
 			scriptLoading: "blocking",
+			minify: false,
 		});
 	});
 }

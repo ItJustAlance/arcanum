@@ -1,0 +1,316 @@
+<%
+var data = {
+  title: "Arcanum Lounge",
+  copyright: "Arcanum",
+  logo: "img/logo.png"
+};
+
+var headerHtml = _.template(require('../includes/header.html'))(data);
+var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);
+var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);
+
+var footerHtml = _.template(require('../includes/footer.html'))({
+  ...data,
+  mobileFooter,
+  mobileMenu
+});
+%><!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= data.title %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="inner-page over">
+  <%= headerHtml %>
+  
+  <main class="inner-page-container">
+    <div class="page-header-ilustration --interior">
+      <div class="page-header-ilustration__content">
+        <div class="page-header-ilustration__title">Интерьер</div>
+        <div class="page-header-ilustration__text">Общие зоны и вип-залы</div>
+      </div><!--end page-header-ilustration__content-->
+      <div class="page-header-ilustration__image">
+        <picture>
+          <img class="page-header-ilustration__image-img" src="img/interior-desktop.png" alt="">
+          <!-- Для экранов от 1024px и шире -->
+          <source media="(min-width: 1024px)" srcset="img/interior-desktop.png">
+          <!-- Для экранов от 768px до 1023px -->
+          <source media="(min-width: 768px)" srcset="img/interior-tablet.png">
+          <!-- Базовое изображение для всех остальных экранов (мобильные) -->
+          <img class="page-header-ilustration__image-img" src="img/interior-tablet.png" alt="">
+        </picture>
+        
+      </div>
+      <div class="page-header-ilustration__overlay"></div>
+    </div><!--end page-header-ilustration -->
+    
+    <section class="interior-article">
+      <div class="interior-article__inner">
+        <div class="interior-article__intro">
+          <h2 class="interior-article__title">Общие зоны</h2>
+          <p class="interior-article__text">Наш интерьер сочетает мягкие зоны с премиальной обивкой, приглушенный свет и авторские блюда. Продуманная планировка обеспечивает приватность, а современные детали создают идеальную среду для релакса. У нас вы найдете уютные уголки для приватных встреч и просторные зоны
+            для компаний, а также уникальные кальянные коктейли
+            и авторские смеси.</p>
+        </div>
+        <div class="interior-article__cards">
+          <div class="interior-article__cards-slider js-interior-multi-slider">
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="interior-article">
+      <div class="interior-article__inner">
+        <div class="interior-article__intro">
+          <h2 class="interior-article__title">ВИп-зал №1</h2>
+          <p class="interior-article__text">Описание зала, например: “Зал идеально подходит
+            для небольших компаний и уединения в уютной атмосфере”. Продуманная планировка обеспечивает приватность,
+            а современные детали создают идеальную среду для релакса</p>
+          <div class="btn-box">
+            <button class="btn-event btn--primary js-btn-modal" data-modal="modal-booking">Забронировать</button>
+          </div>
+        </div>
+        <div class="interior-article__cards">
+          <div class="interior-article__cards-slider js-interior-multi-slider">
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="interior-article">
+      <div class="interior-article__inner">
+        <div class="interior-article__intro">
+          <h2 class="interior-article__title">ВИп-зал №1</h2>
+          <p class="interior-article__text">Описание зала, например: “Зал идеально подходит
+            для небольших компаний и уединения в уютной атмосфере”. Продуманная планировка обеспечивает приватность,
+            а современные детали создают идеальную среду для релакса</p>
+          <div class="btn-box">
+            <button class="btn-event btn--primary js-btn-modal" data-modal="modal-booking">Забронировать</button>
+          </div>
+        </div>
+        <div class="interior-article__cards">
+          <div class="interior-article__cards-slider js-interior-multi-slider">
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="interior-article">
+      <div class="interior-article__inner">
+        <div class="interior-article__intro">
+          <h2 class="interior-article__title">ВИп-зал №1</h2>
+          <p class="interior-article__text">Описание зала, например: “Зал идеально подходит
+            для небольших компаний и уединения в уютной атмосфере”. Продуманная планировка обеспечивает приватность,
+            а современные детали создают идеальную среду для релакса</p>
+          <div class="btn-box">
+            <button class="btn-event btn--primary js-btn-modal" data-modal="modal-booking">Забронировать</button>
+          </div>
+        </div>
+        <div class="interior-article__cards">
+          <div class="interior-article__cards-slider js-interior-multi-slider">
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="interior-article__cards-slide">
+              <div class="interior-article__card">
+                <div class="interior-article__card-img">
+                  <img src="img/inter-inter.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="booking" id="booking">
+      <div class="booking__inner">
+        <h2 class="booking__title">Забронируйте пространство<br>в центре столицы</h2>
+        <form class="booking-form">
+          <div class="booking-form__row">
+            <input class="booking-form__input" name="name" placeholder="Ваше имя" required>
+            <input class="booking-form__input" name="phone" placeholder="Номер телефона" required>
+          </div>
+          <div class="booking-form__row">
+            <input class="booking-form__input" name="datetime" placeholder="Дата и время" required>
+            <div class="booking-form__input booking-form__counter-wrap">
+              <span class="booking-form__counter-label">Количество персон</span>
+              <div class="persons-counter js-persons-counter">
+                <button type="button" class="js-counter-minus">−</button>
+                <span class="js-counter-value">1</span>
+                <button type="button" class="js-counter-plus">+</button>
+              </div>
+            </div>
+          </div>
+          <input class="booking-form__input booking-form__input--full" name="comment" placeholder="Комментарий">
+          <label class="booking-form__agree check">
+            <input type="checkbox" class="check-input" required>
+            <span class="check-check"></span>
+            <span class="check-label">Нажимая «забронировать стол», я подтверждаю согласие с <a href="#">политикой конфиденциальности</a></span>
+          </label>
+          <button type="submit" class="booking-form__submit">Забронировать стол</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="contacts__map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Aarcanum&amp;source=constructor&amp;scroll=true"
+          width="100%"
+          height="514"
+          frameborder="0"
+          allowfullscreen
+          title="Карта Arcanum"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <%= footerHtml %>
+  <div id="modal-booking" class="just-modal">
+    <div class="just-modal__overlay"></div>
+    <div class="just-modal__wrapper">
+      <div class="just-modal__container just-modal__container--booking">
+        <div class="just-modal__body just-modal__body--booking">
+          <button type="button" class="just-modal__close js-just-modal__close" aria-label="Закрыть">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <h2 class="booking__title">Забронируйте пространство<br>в центре столицы</h2>
+          <form class="booking-form">
+            <div class="booking-form__row">
+              <input class="booking-form__input" name="modal_name" placeholder="Ваше имя" required>
+              <input class="booking-form__input" name="modal_phone" placeholder="Номер телефона" required>
+            </div>
+            <div class="booking-form__row">
+              <input class="booking-form__input" name="modal_datetime" placeholder="Дата и время" required>
+              <div class="booking-form__input booking-form__counter-wrap">
+                <span class="booking-form__counter-label">Количество персон</span>
+                <div class="persons-counter js-persons-counter">
+                  <button type="button" class="js-counter-minus">−</button>
+                  <span class="js-counter-value">1</span>
+                  <button type="button" class="js-counter-plus">+</button>
+                </div>
+              </div>
+            </div>
+            <input class="booking-form__input booking-form__input--full" name="modal_comment" placeholder="Комментарий">
+            <label class="booking-form__agree check">
+              <input type="checkbox" class="check-input" required>
+              <span class="check-check"></span>
+              <span class="check-label">Нажимая «забронировать стол», я подтверждаю согласие с <a href="#">политикой конфиденциальности</a></span>
+            </label>
+            <button type="submit" class="booking-form__submit">Забронировать стол</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

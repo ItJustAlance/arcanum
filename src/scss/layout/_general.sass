@@ -206,7 +206,27 @@ body
       height: 100%
       object-fit: cover
       object-position: center bottom
-
+  
+  &.--interior
+    align-items: flex-start
+    padding-top: 200px
+    .page-header-ilustration
+      &__overlay
+        background: linear-gradient(0.86deg, #000000 0.71%, rgba(0, 0, 0, 0) 47.13%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50.88%)
+      &__title
+        font-size: 52px
+        +r($xxl)
+          font-size: 52px
+        +r($sm)
+          font-size: 36px
+      &__image
+        &-img
+          position: absolute
+          inset: 0
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: center
       
 .pagination
   &-box
@@ -230,3 +250,17 @@ body
     border-radius: 50%
     &.--active
       background: #913500
+
+
+
+/* Для карты, встроенной через iframe */
+.contacts__map iframe
+  filter: grayscale(90%) invert(1) hue-rotate(10deg)
+  -webkit-filter: grayscale(90%) invert(1) hue-rotate(10deg) /* Для поддержки старых версий Safari */
+
+
+/* Для интерактивной карты, подключенной через JS API */
+.ymaps-layers-pane
+  filter: grayscale(90%) invert(1) hue-rotate(180deg)
+  -webkit-filter: grayscale(90%) invert(1) hue-rotate(180deg)
+

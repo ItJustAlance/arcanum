@@ -22,6 +22,23 @@ $(function() {
 		prevArrow: $('.js-events-prev'),
 		nextArrow: $('.js-events-next')
 	});
+	$('.js-interior-multi-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: true,
+		arrows: true,
+		responsive: [
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					arrows: false,
+					variableWidth: true,
+				}
+			}
+		]
+	});
 
   // VIP slider
   $('.js-vip-slider').slick({
