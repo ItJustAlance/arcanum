@@ -1,0 +1,168 @@
+.contact
+  &-page
+    padding-top: 64px
+    padding-bottom: 80px
+    .h1-title
+      text-align: left
+      margin: 0 0 44px
+      +r($sm)
+        margin-bottom: 26px
+  &-section
+    background: #111111
+    padding: 52px 52px 0
+    border-radius: 4px
+    display: flex
+    flex-wrap: wrap
+    +r($sm)
+      background: none
+      padding: 0
+    
+  &-info
+    $bg-color: #111111
+    $text-white: #ffffff
+    $text-gray: #cccccc
+    $muted-color: rgba(255,255,255, .5)
+    $border-color: rgba(255,255,255, .2)
+    
+    flex: 0 0 auto
+    max-width: 700px
+    width: calc(50% - 110px)
+    margin-bottom: 60px
+    margin-right: 110px
+    // Общие стили для подписей и значений
+    .label
+      display: block
+      color: $muted-color
+      font-size: 15px
+      margin-bottom: 8px
+      +r($sm)
+        font-size: 12px
+      &.section-title
+        margin-bottom: 25px
+    
+    .value
+      margin: 0
+      padding: 0
+      font-size: 18px
+      font-weight: 600
+      letter-spacing: 0.5px
+      +r($sm)
+        font-size: 12px
+      &.uppercase
+        text-transform: uppercase
+    
+    // Верхняя секция: Контакты
+    .contacts-grid
+      display: grid
+      grid-template-columns: 1.2fr 0.8fr
+      row-gap: 30px
+      column-gap: 20px
+      +r($sm)
+        gap: 16px
+    // Иконки соцсетей внутри контактов
+    .social-icons
+      display: flex
+      gap: 12px
+      // align-items: flex-end
+      padding-bottom: 4px
+      
+      .icon-link
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: 22px
+        height: 22px
+        color: $bg-color
+        border-radius: 50%
+        text-decoration: none
+        font-weight: bold
+        font-size: 12px
+    
+    // Разделительная линия
+    .divider
+      border: none
+      border-top: 1px solid $border-color
+      margin: 52px 0
+      +r($sm)
+        margin: 30px 0
+    // Нижняя секция: Реквизиты
+    .requisites-section
+      color: #fff
+      
+    .requisites-grid
+      display: grid
+      grid-template-columns: 1fr 1fr
+      gap: 40px
+      
+      .req-column p
+        padding: 0
+        margin: 0 0 12px 0
+        font-size: 15px
+      
+        line-height: 1.2
+    
+    // Адаптивность под мобильные экраны
+    +r($xl)
+      width: 100%
+      max-width: 100%
+    
+    +r($md)
+      .contacts-grid,
+      .requisites-grid
+        grid-template-columns: 1fr
+        gap: 16px
+        
+      .social-icons
+        align-items: flex-start
+        margin-top: -10px
+        
+    +r($sm)
+      .social-icons
+        margin-top: 16px
+        
+  &-booking
+    width: calc(50% - 60px)
+    max-width: calc(50% - 60px)
+    border: 1px solid rgba(255,255,255, .2)
+    border-radius: 8px
+    margin-bottom: 60px
+    +r($xl)
+      width: 100%
+      max-width: 100%
+      
+    +r($sm)
+      border: none
+      border-radius: 0
+      margin: 0 -20px
+      max-width: calc(100% + 40px)
+      width: calc(100% + 40px)
+      order: 3
+      
+    .booking
+      border-radius: 8px
+      padding: 35px
+      +r($sm)
+        padding: 20px
+      &__title
+        font-size: 18px
+        font-family: $baseFont
+        font-weight: 600
+        color: #fff
+        background: none
+        -webkit-background-clip: unset
+        -webkit-text-fill-color: #fff
+        line-height: 1.3
+        text-align: left
+        margin: 0
+        padding: 0 0 14px
+      &__subtitle
+        color: rgba(255,255, 255, .6)
+        font-size: 13px
+        margin-bottom: 32px
+  &__map-wrapper
+    width: calc(100% + 104px)
+    margin: 0 -52px
+    +r($sm)
+      order: 1
+      width: calc(100% + 40px)
+      margin: 0 -20px 32px
