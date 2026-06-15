@@ -102,4 +102,9 @@ $(function() {
     $("body").removeClass("lock just-modal--default")
     $(".just-modal").removeClass("open in");
   });
+	
+	$('.js-tabs-list').delegate('li:not(.active)', 'click', function() {
+		$(this).addClass('active').siblings().removeClass('active')
+			.parents('.js-tabs-wrapper').find('.js-tabs-box').eq($(this).index()).addClass('show').siblings('.js-tabs-box').removeClass('show');
+	})
 });
