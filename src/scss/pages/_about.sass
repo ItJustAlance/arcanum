@@ -1,0 +1,419 @@
+// ─── About: Hero intro ────────────────────────────────────────────────────
+.about-intro
+  border-bottom: 1px solid rgba(255,255,255,0.2)
+  padding: 112px 160px 80px
+
+  &__title
+    margin: 0 0 32px
+    font-family: $baseFont
+    font-weight: 600
+    font-size: 88px
+    line-height: 74px
+    text-transform: uppercase
+    color: $colorText
+
+  &__title-line
+    display: block
+    &--right
+      text-align: right
+    &--left
+      text-align: left
+      margin-top: 39px
+
+  &__text
+    margin: 0 0 0 auto
+    max-width: 843px
+    font-family: $baseFont
+    font-weight: 600
+    font-size: 15px
+    line-height: 30px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorText
+    opacity: 0.6
+
+  +r($xxl)
+    padding: 60px 40px
+    &__title
+      font-size: 56px
+      line-height: 1.2
+      margin-bottom: 24px
+    &__title-line--left
+      margin-top: 8px
+    &__text
+      max-width: 100%
+      margin-left: 0
+
+  +r($lg)
+    &__title
+      font-size: 40px
+
+  +r($sm)
+    padding: 32px 20px
+    &__title
+      font-size: 24px
+      line-height: 1.3
+      margin-bottom: 16px
+    &__title-line--left
+      margin-top: 4px
+    &__text
+      font-size: 13px
+      line-height: 22px
+
+// ─── About: full-width media ──────────────────────────────────────────────
+.about-video
+  &__img
+    display: block
+    width: 100%
+    height: 812px
+    object-fit: cover
+
+  +r($xxl)
+    &__img
+      height: 500px
+
+  +r($sm)
+    &__img
+      height: 224px
+
+// ─── About: Oasis text block ──────────────────────────────────────────────
+.about-oasis
+  padding: 112px 160px 112px 568px
+  display: flex
+  flex-direction: column
+  gap: 34px
+
+  &__label
+    margin: 0
+    font-family: $baseFont
+    font-weight: 600
+    font-size: 16px
+    line-height: 30px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorText
+    opacity: 0.6
+
+  &__title
+    margin: 0
+    font-family: $baseFont
+    font-weight: 600
+    font-size: 68px
+    line-height: 74px
+    text-transform: uppercase
+    color: $colorText
+
+  &__text
+    margin: 0
+    max-width: 1056px
+    font-family: $baseFont
+    font-weight: 600
+    font-size: 15px
+    line-height: 30px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorText
+    opacity: 0.6
+
+  +r($xxl)
+    padding: 80px 40px 80px 196px
+    gap: 24px
+    &__title
+      font-size: 48px
+      line-height: 1.2
+    &__text
+      max-width: 768px
+
+  +r($lg)
+    padding: 60px 40px 60px 60px
+
+  +r($sm)
+    padding: 40px 20px
+    gap: 16px
+    &__label
+      font-size: 13px
+    &__title
+      font-size: 28px
+      line-height: 1.3
+    &__text
+      font-size: 13px
+      line-height: 22px
+      max-width: 100%
+
+// ─── About: running gallery (marquee) ─────────────────────────────────────
+.about-marquee
+  overflow: hidden
+  padding: 0 16px
+
+  &__track
+    display: flex
+    align-items: center
+    gap: 16px
+    width: max-content
+    animation: about-marquee-scroll 36s linear infinite
+
+    img
+      display: block
+      flex-shrink: 0
+      height: 557px
+      width: auto
+      aspect-ratio: 1072 / 557
+      object-fit: cover
+
+  +r($xxl)
+    &__track img
+      height: 360px
+
+  +r($sm)
+    &__track img
+      height: 157px
+
+@keyframes about-marquee-scroll
+  from
+    transform: translate3d(0, 0, 0)
+  to
+    transform: translate3d(-50%, 0, 0)
+
+// ─── About: kitchen / chef text block ─────────────────────────────────────
+.about-kitchen
+  padding: 148px 160px 100px
+  display: flex
+  flex-direction: column
+  gap: 34px
+
+  &__label
+    margin: 0
+    font-family: $baseFont
+    font-weight: 600
+    font-size: 16px
+    line-height: 30px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorText
+    opacity: 0.6
+
+  &__title
+    margin: 0
+    font-family: $baseFont
+    font-weight: 600
+    font-size: 68px
+    line-height: 74px
+    text-transform: uppercase
+    color: $colorText
+
+  &__text
+    margin: 0
+    max-width: 920px
+    font-family: $baseFont
+    font-weight: 600
+    font-size: 15px
+    line-height: 30px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $colorText
+    opacity: 0.6
+
+  +r($xxl)
+    padding: 80px 40px
+    gap: 24px
+    &__title
+      font-size: 48px
+      line-height: 1.2
+    &__text
+      max-width: 768px
+
+  +r($sm)
+    padding: 40px 20px
+    gap: 16px
+    &__label
+      font-size: 13px
+    &__title
+      font-size: 28px
+      line-height: 1.3
+    &__text
+      font-size: 13px
+      line-height: 22px
+
+// ─── About: chef / dishes gallery ──────────────────────────────────────────
+.about-team
+  display: flex
+  gap: 16px
+  height: 824px
+  padding: 0 16px 24px
+
+  &__main
+    flex: 0 0 56%
+    height: 100%
+    img
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__side
+    flex: 1
+    min-width: 0
+    display: flex
+    flex-direction: column
+    gap: 12px
+
+  &__img
+    flex: 1
+    min-height: 0
+    img
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  +r($xxl)
+    height: 600px
+
+  +r($lg)
+    height: 420px
+    gap: 8px
+    padding: 0 20px 20px
+    &__side
+      gap: 8px
+
+  +r($sm)
+    height: 300px
+    padding: 0 16px 16px
+
+// ─── About: guest card / loyalty banner ────────────────────────────────────
+.guest-card
+  position: relative
+  overflow: hidden
+  display: flex
+  align-items: center
+  min-height: 360px
+  padding: 10px 160px 0
+
+  &__media
+    position: absolute
+    inset: 0
+    img
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__overlay
+    position: absolute
+    inset: 0
+    background: rgba(167, 61, 0, 0.65)
+
+  &__inner
+    position: relative
+    z-index: 1
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 40px
+    width: 100%
+    max-width: 1600px
+    margin: 0 auto
+
+  &__info
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 40px
+    max-width: 657px
+
+  &__texts
+    display: flex
+    flex-direction: column
+    gap: 12px
+
+  &__title
+    margin: 0
+    font-family: $baseFont
+    font-weight: 700
+    font-size: 34px
+    line-height: 48px
+    text-transform: uppercase
+    color: $colorText
+
+  &__text
+    margin: 0
+    font-family: $baseFont
+    font-weight: 500
+    font-size: 15px
+    line-height: 26px
+    color: $colorText
+    opacity: 0.9
+
+  &__btn
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    height: 52px
+    padding: 0 32px
+    background: $colorText
+    color: #913500
+    border: 1px solid $colorText
+    border-radius: 64px
+    font-family: $baseFont
+    font-weight: 600
+    font-size: 15px
+    text-decoration: none
+    transition: opacity 0.3s ease
+    &:hover
+      opacity: 0.85
+
+  &__stats
+    display: flex
+    gap: 20px
+    width: 791px
+    flex-shrink: 0
+
+  &__stat
+    flex: 1
+    display: flex
+    flex-direction: column
+    gap: 12px
+    padding: 28px 44px 32px
+    background: rgba(255,255,255,0.2)
+    backdrop-filter: blur(10px)
+    border-radius: 4px
+
+  &__stat-value
+    font-family: $baseFont
+    font-weight: 700
+    font-size: 52px
+    line-height: 59px
+    text-transform: uppercase
+    color: $colorText
+
+  &__stat-label
+    font-family: $baseFont
+    font-weight: 500
+    font-size: 15px
+    line-height: 26px
+    color: $colorText
+    opacity: 0.9
+
+  +r($xxl)
+    padding: 40px
+    min-height: 0
+    &__inner
+      flex-direction: column
+      align-items: flex-start
+      gap: 32px
+    &__stats
+      width: 100%
+
+  +r($sm)
+    padding: 40px 20px
+    &__title
+      font-size: 26px
+      line-height: 1.4
+    &__stats
+      flex-direction: column
+      gap: 12px
+    &__stat
+      padding: 24px
+    &__stat-value
+      font-size: 40px
+      line-height: 1.2
