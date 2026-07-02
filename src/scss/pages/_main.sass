@@ -506,7 +506,9 @@ $aboutBg: #000
       align-items: flex-start
       gap: 20px
       transition: none
-
+      .btn--oval, .menu-oval__content
+        opacity: 1
+        transform: translateY(0%)
     &__card:hover &__hover
       opacity: 1
 
@@ -630,6 +632,7 @@ $aboutBg: #000
 
   +r($xxl)
     padding: 60px 40px
+    
     &__inner
       flex-direction: column
     &__info
@@ -640,6 +643,11 @@ $aboutBg: #000
 
   +r($sm)
     padding: 40px 20px
+    &__tabs
+      white-space: nowrap
+      flex-wrap: nowrap
+      overflow: auto
+      max-width: calc(100vw - 24px)
 
 // ─── Events ──────────────────────────────────────────────────────────────────
 .events
@@ -830,7 +838,15 @@ $aboutBg: #000
 
   +r($lg)
     padding: 60px 20px
-
+    
+    &__cards
+      &-wrapper
+        margin: 0
+        max-width: 100%
+        .events__arrow--prev
+          left: -12px
+        .events__arrow--next
+          right: -12px
   +r($sm)
     padding: 40px 20px
     &__more
