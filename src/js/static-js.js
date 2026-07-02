@@ -7,13 +7,80 @@ $(function() {
   });
 	
 	// Interior slider
-	$('.js-interior-slider').slick({
-		variableWidth: true,
-		slidesToScroll: 1,
-		infinite: true,
-		arrows: false,
-	});
+	// $('.js-interior-slider').slick({
+	// 	variableWidth: true,
+	// 	slidesToScroll: 1,
+	// 	infinite: true,
+	// 	arrows: false,
+	// });
 	
+	$(window).on('load', function () {
+		
+		const $slider = $('.js-interior__slider');
+		
+		if (!$slider.length) return;
+		
+		// Оригинальные элементы
+		const $items = $slider.children();
+		
+		// Ширина одного набора
+		let setWidth = 0;
+		
+		$items.each(function () {
+			setWidth += $(this).outerWidth(true);
+		});
+		
+		// Дублируем, пока не станет достаточно длинным
+		while ($slider[0].scrollWidth < window.innerWidth * 3) {
+			$slider.append($items.clone());
+		}
+		
+		// Добавляем ещё один полный набор
+		$slider.append($items.clone());
+		
+		let x = 0;
+		let paused = false;
+		
+		// скорость px/sec
+		const speed = 80;
+		
+		let lastTime = performance.now();
+		
+		function animate(time) {
+			
+			const delta = (time - lastTime) / 1000;
+			lastTime = time;
+			
+			if (!paused) {
+				
+				x += speed * delta;
+				
+				if (x >= setWidth) {
+					x -= setWidth;
+				}
+				
+				$slider.css(
+					'transform',
+					`translate3d(${-x}px,0,0)`
+				);
+			}
+			
+			requestAnimationFrame(animate);
+		}
+		
+		requestAnimationFrame(animate);
+		
+		$slider
+			.on('mouseenter', function () {
+				paused = true;
+			})
+			.on('mouseleave', function () {
+				lastTime = performance.now();
+				paused = false;
+			});
+		
+	});
+
 	// Events slider
 	$('.js-events-slider').slick({
 		slidesToShow: 2,

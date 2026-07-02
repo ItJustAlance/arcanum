@@ -4,6 +4,7 @@
   padding: 60px 0 132px
   overflow: hidden
   max-width: 100vw
+  
   &__img
     border-radius: 16px
     overflow: hidden
@@ -14,13 +15,18 @@
       display: block
 
   &__slider
-    max-width: 100vw
+    width: max-content
+    will-change: transform
+    white-space: nowrap
 
+    
   &__slide
     width: 522px
     padding: 0 8px
     outline: none
     box-sizing: content-box
+    display: inline-block
+    vertical-align: top
 
     &--short
       .interior__img img
@@ -51,6 +57,7 @@
     &__slide--tall .interior__img img
       height: 240px
 
+ 
 // ─── VIP Slider ──────────────────────────────────────────────────────────────
 .vip
   position: relative
@@ -126,7 +133,7 @@
 
   &__text
     position: absolute
-    bottom: 60px
+    bottom: 110px
     left: 0
     right: 0
     text-align: center

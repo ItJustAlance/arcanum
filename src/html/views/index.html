@@ -2,7 +2,7 @@
 var data = {
   title: "Arcanum Lounge",
   copyright: "Arcanum",
-  logo: "img/logo.png"
+  logo: "img/logo-white.svg"
 };
 
 var headerHtml = _.template(require('../includes/header.html'))(data);
@@ -37,10 +37,7 @@ var footerHtml = _.template(require('../includes/footer.html'))({
         <h1 class="hero__title">Лаунж-пространство в сердце Москвы</h1>
         <div class="hero__subtitle">ПОГРУЗИТЕСЬ В АТМОСФЕРУ УЮТА И СТИЛЯ</div>
       </div>
-      <button class="hero-btn-bron">
-        <img src="img/ico-bron.svg" alt="">
-        Бронь
-      </button>
+      
     </section>
 
     <section class="about" id="about">
@@ -55,7 +52,7 @@ var footerHtml = _.template(require('../includes/footer.html'))({
             </address>
           </div>
           <div class="b-btn">
-            <button class="btn btn--about js-btn-modal" data-modal="modal-booking">Подробнее о нас</button>
+            <button class="btn btn--about js-btn-modal" data-modal="modal-booking"><span class="lay-bg"><span class="text">Подробнее о нас</span></span></button>
           </div>
           
         </div>
@@ -66,7 +63,7 @@ var footerHtml = _.template(require('../includes/footer.html'))({
     </section>
 
     <section class="interior" id="interior">
-      <div class="interior__slider js-interior-slider">
+      <div class="interior__slider js-interior__slider">
         <div class="interior__slide interior__slide--short">
           <div class="interior__img"><img src="img/interior-1.jpg" alt="Общий зал"></div>
           <span class="interior__caption">Общий зал</span>
@@ -136,7 +133,7 @@ var footerHtml = _.template(require('../includes/footer.html'))({
         </article>
         <article class="menu-oval__card">
           <div class="menu-oval__img">
-            <img src="img/menu-bar.jpg" alt="Барная карта">
+            <img src="img/menu-bar.png" alt="Барная карта">
           </div>
           <div class="menu-oval__hover">
             <div class="menu-oval__content">
@@ -151,15 +148,26 @@ var footerHtml = _.template(require('../includes/footer.html'))({
 
     <section class="service" id="service">
       <div class="service__inner">
-        <div class="service__info">
+        <div class="service__info js-tabs-wrapper">
           <h2 class="service__title">Сервис</h2>
-          <div class="service__tabs">
-            <button class="service__tab is-active js-service-tab">Система лояльности</button>
-            <button class="service__tab js-service-tab">Акции</button>
-            <button class="service__tab js-service-tab">Аренда зала</button>
+          <ul class="service__tabs js-tabs-list">
+            <li class="service__tab active"><span>Система лояльности</span></li>
+            <li class="service__tab"><span>Акции</span></li>
+            <li class="service__tab"><span>Аренда зала</span></li>
+          </ul>
+          <div class="service__tab-box js-tabs-box show">
+            <p class="service__text">Скачайте приложение, чтобы получать скидки, следить за акциями и бронировать столики в несколько кликов. Программа лояльности позволяет копить баллы и обменивать их на привилегии.</p>
+            <a href="#" class="btn btn--service">Скачать приложение</a>
           </div>
-          <p class="service__text">Скачайте приложение, чтобы получать скидки, следить за акциями и бронировать столики в несколько кликов. Программа лояльности позволяет копить баллы и обменивать их на привилегии.</p>
-          <a href="#" class="btn btn--service">Скачать приложение</a>
+          <div class="service__tab-box js-tabs-box">
+            <p class="service__text">ть за акциями и бронировать столики в несколько кликов. Программа лояльности позволяет копить баллы и обменивать их на привилегии.</p>
+            <a href="#" class="btn btn--service">Скачать приложение</a>
+          </div>
+          <div class="service__tab-box js-tabs-box">
+            <p class="service__text">Скачай.</p>
+            <a href="#" class="btn btn--service">Скачать приложение</a>
+          </div>
+          
         </div>
         <div class="service__image">
           <img src="img/service.png" alt="Приложение Arcanum">
@@ -174,63 +182,70 @@ var footerHtml = _.template(require('../includes/footer.html'))({
           <p class="events__text">Авторские коктейли и атмосфера премиального комфорта ждут вас в центре Москвы</p>
           <time class="events__date">1 июня 2026</time>
           <div class="btn-box">
-            <button class="btn-event btn--primary js-btn-modal" data-modal="modal-booking">Забронировать</button>
+            <button class="btn-event btn--grad js-btn-modal" data-modal="modal-booking"><span class="lay-bg"><span class="text">Забронировать</span></span></button>
           </div>
         </div>
-        <div class="events__cards">
-          <div class="events__cards-slider js-events-slider">
-            <div class="events__cards-slide">
-              <article class="events__card">
-                <div class="events__card-img">
-                  <img src="img/events-1.png" alt="">
-                </div>
-                <div class="events__card-body">
-                  <h4 class="events__card-title">Скоро открытие</h4>
-                  <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
-                  <a href="#" class="events__more">Подробнее →</a>
-                </div>
-              </article>
-            </div>
-            <div class="events__cards-slide">
-              <article class="events__card">
-                <div class="events__card-img">
-                  <img src="img/events-2.png" alt="">
-                </div>
-                <div class="events__card-body">
-                  <h4 class="events__card-title">Специальное событие</h4>
-                  <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
-                  <a href="#" class="events__more">Подробнее →</a>
-                </div>
-              </article>
-            </div>
-            <div class="events__cards-slide">
-              <article class="events__card">
-                <div class="events__card-img">
-                  <img src="img/events-2.png" alt="">
-                </div>
-                <div class="events__card-body">
-                  <h4 class="events__card-title">Специальное событие</h4>
-                  <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
-                  <a href="#" class="events__more">Подробнее →</a>
-                </div>
-              </article>
-            </div>
-            <div class="events__cards-slide">
-              <article class="events__card">
-                <div class="events__card-img">
-                  <img src="img/events-2.png" alt="">
-                </div>
-                <div class="events__card-body">
-                  <h4 class="events__card-title">Специальное событие</h4>
-                  <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
-                  <a href="#" class="events__more">Подробнее →</a>
-                </div>
-              </article>
+        <div class="events__cards-wrapper">
+          <div class="events__cards">
+            <div class="events__cards-slider js-events-slider">
+              <div class="events__cards-slide">
+                <article class="events__card">
+                  <div class="events__card-img">
+                    <img src="img/events-1.png" alt="">
+                  </div>
+                  <div class="events__card-body">
+                    <h4 class="events__card-title">Скоро открытие</h4>
+                    <p class="events__card-text">Ждём вас на торжественном открытии нашего лаунж-пространства. Живая музыка, авторские коктейли и особая атмосфера.</p>
+                    <a href="#" class="events__more">Подробнее →</a>
+                  </div>
+                </article>
+              </div>
+              <div class="events__cards-slide">
+                <article class="events__card">
+                  <div class="events__card-img">
+                    <img src="img/events-2.png" alt="">
+                  </div>
+                  <div class="events__card-body">
+                    <h4 class="events__card-title">Специальное событие</h4>
+                    <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
+                    <a href="#" class="events__more">Подробнее →</a>
+                  </div>
+                </article>
+              </div>
+              <div class="events__cards-slide">
+                <article class="events__card">
+                  <div class="events__card-img">
+                    <img src="img/events-2.png" alt="">
+                  </div>
+                  <div class="events__card-body">
+                    <h4 class="events__card-title">Специальное событие</h4>
+                    <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
+                    <a href="#" class="events__more">Подробнее →</a>
+                  </div>
+                </article>
+              </div>
+              <div class="events__cards-slide">
+                <article class="events__card">
+                  <div class="events__card-img">
+                    <img src="img/events-2.png" alt="">
+                  </div>
+                  <div class="events__card-body">
+                    <h4 class="events__card-title">Специальное событие</h4>
+                    <p class="events__card-text">Следите за нашими мероприятиями и специальными предложениями. Бронируйте места заранее.</p>
+                    <a href="#" class="events__more">Подробнее →</a>
+                  </div>
+                </article>
+              </div>
+              
             </div>
             
           </div>
-          <button class="events__arrow events__arrow--prev js-events-prev" aria-label="Назад"></button>
-          <button class="events__arrow events__arrow--next js-events-next" aria-label="Вперёд"></button>
+          <button class="events__arrow events__arrow--prev js-events-prev" aria-label="Назад">
+            <img src="/img/arr-l.svg" alt="">
+          </button>
+          <button class="events__arrow events__arrow--next js-events-next" aria-label="Вперёд">
+            <img src="/img/arr-r.svg" alt="">
+          </button>
         </div>
       </div>
     </section>
@@ -244,8 +259,12 @@ var footerHtml = _.template(require('../includes/footer.html'))({
           <img src="img/vip.png" alt="VIP зал">
         </div>
       </div>
-      <button class="vip__arrow vip__arrow--prev js-vip-prev" aria-label="Назад"></button>
-      <button class="vip__arrow vip__arrow--next js-vip-next" aria-label="Вперёд"></button>
+      <button class="vip__arrow vip__arrow--prev js-vip-prev" aria-label="Назад">
+        <img src="/img/arr-l.svg" alt="">
+      </button>
+      <button class="vip__arrow vip__arrow--next js-vip-next" aria-label="Вперёд">
+        <img src="/img/arr-r.svg" alt="">
+      </button>
       <div class="vip__text">
         <h2 class="vip__title">Вип-залы для вашего отдыха</h2>
         <p class="vip__subtitle">Мы продумали каждую деталь, чтобы вам было комфортно</p>
@@ -275,9 +294,9 @@ var footerHtml = _.template(require('../includes/footer.html'))({
           <label class="booking-form__agree check">
             <input type="checkbox" class="check-input" required>
             <span class="check-check"></span>
-            <span class="check-label">Нажимая «забронировать стол», я подтверждаю согласие с <a href="#">политикой конфиденциальности</a></span>
+            <span class="check-label">Нажимая “забронировать стол”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a> и <a href="#">пользовательским соглашениям</a></span>
           </label>
-          <button type="submit" class="booking-form__submit">Забронировать стол</button>
+          <button type="submit" class="booking-form__submit btn--grad"><span class="lay-bg"><span class="text">Забронировать стол</span></span></button>
         </form>
       </div>
     </section>
@@ -325,7 +344,7 @@ var footerHtml = _.template(require('../includes/footer.html'))({
             <label class="booking-form__agree check">
               <input type="checkbox" class="check-input" required>
               <span class="check-check"></span>
-              <span class="check-label">Нажимая «забронировать стол», я подтверждаю согласие с <a href="#">политикой конфиденциальности</a></span>
+              <span class="check-label">Нажимая “забронировать стол”, я подтверждаю свое согласие с <a href="#">политикой конфиденциальности</a> и <a href="#">пользовательским соглашениям</a></span>
             </label>
             <button type="submit" class="booking-form__submit">Забронировать стол</button>
           </form>

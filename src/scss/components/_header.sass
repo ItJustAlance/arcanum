@@ -9,7 +9,12 @@
   &.is-scrolled
     background: rgba(13,13,13, .95)
     backdrop-filter: blur(8px)
-
+    .header__logo
+      img
+        opacity: 0
+    img.logo-scroll
+      opacity: 1
+      
   &__inner
     display: flex
     align-items: center
@@ -40,7 +45,11 @@
       +r($sm)
         width: 110px
         height: auto
-
+      &.logo-scroll
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
   &__nav-left,
   &__nav-right
     ul
@@ -60,10 +69,10 @@
         letter-spacing: 1px
         text-transform: uppercase
         text-decoration: none
-        opacity: 0.7
+        opacity: 1
         transition: opacity 0.3s ease
         &:hover
-          opacity: 1
+          opacity: 0.7
     +r($xxl)
       display: none
 
@@ -92,7 +101,8 @@
       background: rgba(255,255,255, .12)
       color: #fff
     &:hover
-      opacity: 0.85
+      background: #913500
+      color: #fff
 
   &__burger
     display: none
@@ -120,6 +130,12 @@
 .inner-page
   .header
     background: #000
+    &.is-scrolled
+      .header__logo
+        img
+          opacity: 1
+      img.logo-scroll
+        opacity: 0
     
 // ─── Mobile Menu ─────────────────────────────────────────────────────────────
 .mobile-menu
