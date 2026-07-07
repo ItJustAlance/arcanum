@@ -12,7 +12,8 @@ $color-menuborder: rgba(255, 255, 255, 0.1)
   .menu-tabs
     border-bottom: 1px solid $color-menuborder
     margin-bottom: 60px
-    
+    +r($sm)
+      margin-bottom: 24px
     &-list
       display: flex
       gap: 40px
@@ -43,6 +44,9 @@ $color-menuborder: rgba(255, 255, 255, 0.1)
         border-bottom: 1px solid rgba(255,255,255, 0)
         +r($md)
           font-size: 14px
+          padding-left: 0
+        +r($sm)
+          font-size: 12px
         &.active, &:hover
           color: $color-menutext-main
           border-color: rgba(255,255,255, .6)
@@ -117,6 +121,8 @@ $color-menuborder: rgba(255, 255, 255, 0.1)
       padding-right: 110px
     +r($md)
       font-size: 18px
+    +r($sm)
+      font-size: 16px
   
   .menu-description
     font-family: $baseFont
@@ -131,7 +137,7 @@ $color-menuborder: rgba(255, 255, 255, 0.1)
     font-weight: 400
     white-space: nowrap
     color: $color-menuaccent
-  
+
     
 +r($lg)
   .menu-box
@@ -156,3 +162,13 @@ $color-menuborder: rgba(255, 255, 255, 0.1)
       
     .menu-description
       font-size: 16px
+  
+  +r($sm)
+    .menu-box
+      padding-bottom: 0
+      &__price
+        right: 0
+        
+      .menu-description
+        font-size: 12px
+        padding: 0
