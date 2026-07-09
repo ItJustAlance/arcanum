@@ -292,15 +292,21 @@
 // ─── About: guest card / loyalty banner ────────────────────────────────────
 .guest-card
   position: relative
-  overflow: hidden
+  // overflow: hidden
   display: flex
   align-items: center
   min-height: 360px
   padding: 10px 160px 0
+  
 
   &__media
     position: absolute
     inset: 0
+    top: 0
+    width: 100vw
+    left: 50%
+    transform: translateX(-50%)
+    
     img
       display: block
       width: 100%

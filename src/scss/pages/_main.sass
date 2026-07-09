@@ -332,7 +332,7 @@ $aboutBg: #000
   font-family: $baseFont
   font-weight: 500
   cursor: pointer
-  transition: opacity 0.3s ease
+  transition: all 0.3s ease
   position: relative
   background: radial-gradient(105.07% 187.23% at 49.84% 51.06%, rgba(245, 231, 217, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
   backdrop-filter: blur(10px)
@@ -343,10 +343,12 @@ $aboutBg: #000
     height: 52px
     display: flex
     align-items: center
+    transition: all 0.3s ease
   span.lay-bg
     display: block
     border-radius: 64px
     background: radial-gradient(98.42% 79.79% at 49.84% 51.06%, #F5E7D9 0%, rgba(0, 0, 0, 0) 100%)
+    transition: all 0.3s ease
     &:after
       content: ""
       background: #913500
@@ -357,6 +359,7 @@ $aboutBg: #000
       width: 100%
       height: 100%
       border-radius: 64px
+      transition: all 0.3s ease
   
   &:hover
     span.lay-bg
@@ -635,7 +638,7 @@ $aboutBg: #000
     font-size: 16px
     line-height: 26px
     color: $colorText
-    margin: 0
+    margin: 0 0 24px
     text-transform: uppercase
 
   .btn--service
